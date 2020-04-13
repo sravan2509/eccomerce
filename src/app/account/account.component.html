@@ -1,0 +1,57 @@
+<!-- <div class="box">
+
+</div> -->
+
+<!-- <div class="d"> -->
+<!-- <div class="b"> -->
+    <div class="sidenav">
+        <div class="x">
+            <input type="file" id="selectedFile" style="display: none;" onchange="previewFile()"/>
+            <img src="../../assets/user.png" height="200" alt="user.png" style="width:100px;height: 100px;" class="picture"> 
+           <br>
+           <br>
+            <input type="button" value="choose file"onclick="document.getElementById('selectedFile').click();"  style="background-color:  rgb(138, 241, 138);"><br>
+            <p class="start" style=" cursor: pointer;"  routerLink="/personalinfo" routerLinkActive="active">Personal Info</p>
+            <hr>   
+         <p  style=" cursor: pointer;"  routerLink="/address" routerLinkActive="active">My Addresses</p>
+         <hr>
+        <p style=" cursor: pointer;"  routerLink="/orders" routerLinkActive="active">My Orders</p>
+        <hr>
+        <p style=" cursor: pointer;"  routerLink="/wishlist" routerLinkActive="active">My WishList</p>
+        <hr>
+        <p style=" cursor: pointer;" >LogOut</p>
+    
+      </div>
+    <!-- </div> -->
+   
+    <!-- </div> -->
+    
+</div>
+
+ 
+<script type="text/javascript">
+
+    function previewFile() {
+      var preview = document.querySelector('img');
+      var file = document.querySelector('input[type=file]').files[0];
+      var reader = new FileReader();
+    
+      // when user select an image, `reader.readAsDataURL(file)` will be triggered
+      // reader instance will hold the result (base64) data
+      // next, event listener will be triggered and we call `reader.result` to get
+      // the base64 data and replace it with the image tag src attribute
+      reader.addEventListener("load", function() {
+        console.log('before preview');
+        preview.src = reader.result;
+        console.log('after preview');
+      }, false);
+      if (file) {
+        console.log('inside if');
+        reader.readAsDataURL(file);
+      } else {
+        console.log('inside else');
+      }
+    }
+    
+    </script>
+    <!-- <router-outlet></router-outlet> -->

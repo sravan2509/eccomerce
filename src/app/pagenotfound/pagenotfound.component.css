@@ -1,0 +1,23 @@
+.font{
+    font-size: 12px;
+}
+.font1{
+    font-size: 14px;
+}
+.font2{
+    font-size: 16px;
+}
+.font3{
+    font-size: 24px;
+}
+
+.move{
+    margin-top: 14%;
+}
+
+.button:hover{
+     color: white;
+     font-size: 16px;
+     font-weight: bolder;
+     background-color: #84B9FF;
+}

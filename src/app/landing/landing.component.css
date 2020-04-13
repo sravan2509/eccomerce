@@ -1,0 +1,342 @@
+.logo{
+    /* margin-top: 12%; */
+    margin-right: 30%;
+    display: inline;
+    content: open-quote;
+  }
+  .logo:before {
+    color: #ccc;
+    content: open-quote;
+    font-size: 4em;
+    line-height: 0.1em;
+    margin-right: 0.25em;
+    vertical-align: -0.4em;
+  }
+  
+  .contentmove{
+    margin-top: 12%;
+  
+  }
+  
+  .btn-logo{
+      background-color: white;
+      color: #0D0C45;
+      text-decoration: underline;
+  }
+  
+  .btn-logo:hover{
+      background:rgb(138, 241, 138);
+      color: black;
+      /* border-radius: 12px; */
+      text-decoration: none;
+     cursor: pointer;
+  }
+  
+  .fontcolor{
+      background-color: cadetblue;
+  }
+  .samerow{
+    display: inline;
+    margin-left: 2%;
+    cursor: pointer;
+  }
+  .samesize{
+      width:30px;
+      height: auto;
+      margin-left: 1.5%;
+  }
+  
+  /* now for cards section */
+  
+  .cardmove{
+    margin-left: 200;
+  }
+  
+  .cardsall{
+    width: 300;
+    height: auto;
+  }
+  
+  /* for categories section */
+  
+  .categories{
+    display: inline-flex;
+  }
+  
+  .catcolor1:hover{
+    background-image: url('../../assets/dried-fruits-1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: transparent;
+    cursor: pointer;
+  }
+  .catcolor2:hover{
+    background-image: url('../../assets/organic-oils.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: transparent;
+    cursor: pointer;
+  }
+  .catcolor3:hover{
+    background-image: url('../../assets/beverages.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: transparent;
+    cursor: pointer;
+  }
+  .catcolor4:hover{
+    background-image: url('../../assets/immunity.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: transparent;
+    cursor: pointer;
+  }
+  .catcolor5:hover{
+    background-image: url('../../assets/homedecoration.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: transparent;
+    cursor: pointer;
+  }
+  .catcolor6:hover{
+    background-image: url('../../assets/homecare.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: transparent;
+    cursor: pointer;
+  }
+  .catcolor7:hover{
+    background-image: url('../../assets/organic-snack.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: transparent;
+    cursor: pointer;
+  }
+  .catcolor8:hover{
+    background-image: url('../../assets/fruitsandvegitables.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: transparent;
+    cursor: pointer;
+  }
+  
+  .snap{
+    color: transparent;
+  }
+  .snap:hover{
+    color:white;
+    font-weight: bolder;
+    font-size: 30px;
+    justify-content: center;
+  }
+  
+  /* customer details background color */
+  
+  .bginfo{
+   background-color:rgb(147, 246, 147);
+   display: inline;
+   border: none;
+  }
+  
+  /* places and all */
+  
+  .place1:hover{
+    background-image: url('../../assets/Hyderabad1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-weight: bolder;
+    font-size: 40;
+    cursor: pointer;
+  }
+  .place2:hover{
+    background-image: url('../../assets/delhi1.jfif');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-weight: bolder;
+    font-size: 40;
+    cursor: pointer;
+  }
+  .place3:hover{
+    background-image: url('../../assets/shimla.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-weight: bolder;
+    font-size: 40;
+    cursor: pointer;
+  }
+  .place4:hover{
+    background-image: url('../../assets/bengaluru1.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-weight: bolder;
+    font-size: 40;
+    cursor: pointer;
+  }
+  .place5:hover{
+    background-image: url('../../assets/mumbai.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-weight: bolder;
+    font-size: 40;
+    cursor: pointer;
+  }
+  .place6:hover{
+    background-image: url('../../assets/jaipur.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-weight: bolder;
+    font-size: 40;
+    cursor: pointer;
+  }
+  .place7:hover{
+    background-image: url('../../assets/srinagar.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-weight: bolder;
+    font-size: 40;
+    cursor: pointer;
+  }
+  .place8:hover{
+    background-image: url('../../assets/india.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #FFAE53;
+    font-weight: bolder;
+    font-size: 40;
+    cursor: pointer;
+  }
+  
+  /* know more */
+  .knowmore:hover{
+    background-color: rgb(138, 241, 138);
+    color: white;
+    /* border-radius: 16px; */
+  }
+  
+  /* come to end */
+  .subscribe{
+    margin-left: 10%;
+  }
+  
+  /* about privacy and terms */
+  
+  .borderline{
+    border: none;
+  }
+  
+  .moving{
+    float: right;
+  }
+  
+  .font{
+    font-size: 12px;
+  }
+  .font1{
+    font-size: 14px;
+  }
+  .font2{
+    font-size: 16px;
+  }
+  .font3{
+    font-size: 24px;
+  }
+  .icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  }
+  
+  .icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 16px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+  }
+  
+  .icon-bar a:hover {
+  background-color: #000;
+  }
+  
+  .facebook {
+  background: #3B5998;
+  color: white;
+  }
+  
+  .twitter {
+  background: #55ACEE;
+  color: white;
+  }
+  
+  .google {
+  background: #dd4b39;
+  color: white;
+  }
+  
+  .linkedin {
+  background: #007bb5;
+  color: white;
+  }
+  
+  .youtube {
+  background: #bb0000;
+  color: white;
+  }
+  .abc {
+  
+    float:left;
+  border: solid;
+  border-width: 1px;
+  border-color:rgb(184, 183, 183);
+       cursor: pointer;
+      
+  }
+  .w{
+  
+          border-left: none;
+          border-bottom: none;
+  }
+  .y{
+  
+      border-left: none;
+      border-bottom: none;
+  }
+  .z{
+  
+      border-left: none;
+      border-bottom: none;
+     
+  }
+  .x{
+    border-bottom: none;
+     
+  }
+  .w1{
+  
+    border-left: none;
+  }
+  .y1{
+  
+  border-left: none;
+  }
+  .z1{
+  
+  border-left: none;
+  }
+  .pic{
+  padding:0 50px 0 30px;
+  }
+  .but
+  {
+    padding-bottom: 15px;
+  }

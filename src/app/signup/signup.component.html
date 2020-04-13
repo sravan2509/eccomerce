@@ -1,0 +1,102 @@
+<div class="wrapper" style="background-image: url('images/bg-registration-form-2.jpg');">
+    <div class="inner">
+        <form action="" [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+            <h3>Registration Form</h3>
+            <div class="form-group">
+                <div class="form-wrapper">
+                    <label for="">First Name</label>
+                    <input type="text" class="form-control" name="username" formControlName="name">
+                    <span class="danger"
+                    *ngIf="(registerFormControl.name.touched || submitted) && registerFormControl.name.errors?.required">
+                    Name is required
+                    </span>
+                </div>
+                <div class="form-wrapper">
+                    <label for="">Last Name</label>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+            <div class="form-wrapper">
+                <label for="">Email</label>
+                <input type="text" class="form-control" formControlName="email">
+                <span class="danger"
+                                *ngIf="(registerFormControl.email.touched || submitted) && registerFormControl.email.errors?.required">
+                                Email is required
+                            </span>
+                            <span class="danger"
+                                *ngIf="registerFormControl.email.touched && registerFormControl.email.errors?.email">
+                                Enter a valid email address
+                            </span>
+            </div>
+            <div class="form-wrapper">
+                <label for="">Phone no</label>
+                <input type="tel" class="form-control" formControlName="phoneno">
+                <span class="danger"
+               *ngIf="(registerFormControl.phoneno.touched || submitted) && registerFormControl.phoneno.errors?.required">
+               phoneno is required
+           </span>
+           <span class="danger"
+               *ngIf="registerFormControl.phoneno.touched && registerFormControl.phoneno.errors?.invalidphonenumber">
+               Phone must be 10 digits
+           </span>
+            </div>
+            <div class="form-wrapper">
+                <label for="">Address</label>
+                <input type="text" class="form-control">
+            </div>
+          
+            <div class="form-wrapper ">
+                <label for="">Type of products</label>
+               <select  class="form-control"name="select" >
+                    <option  selected>choose ur good</option>
+                    <option *ngFor ="let i of goods">{{i}}</option>
+                </select> 
+            </div>
+            <div class="form-wrapper">
+                <label for="">Username</label>
+                <input type="text" class="form-control" formControlName="username">
+                <span class="danger"
+                                *ngIf="(registerFormControl.username.touched || submitted) && registerFormControl.username.errors?.required">
+                                User Name is required
+                </span>
+                <span class="danger"
+                    *ngIf="registerFormControl.username.touched && registerFormControl.username.errors?.userNameNotAvailable">
+                    User Name is not available
+                </span>
+            </div>
+            
+            <div class="form-wrapper">
+                <label for="">Password</label>
+                <input type="password" class="form-control" formControlName="password">
+                <span class="danger"
+                    *ngIf="(registerFormControl.password.touched || submitted) && registerFormControl.password.errors?.required">
+                    Password is required
+                </span>
+                <span class="danger"
+                 *ngIf="registerFormControl.password.touched && registerFormControl.password.errors?.invalidPassword">
+                 Password should have minimum 8 characters, at least 1 uppercase letter, 1 lowercase
+                 letter and 1 number
+                </span>
+            </div>
+            <div class="form-wrapper">
+                <label for="">Confirm Password</label>
+                <input type="password" class="form-control" formControlName="confirmPassword">
+                <span class="danger"
+                                *ngIf="(registerFormControl.confirmPassword.touched || submitted)&& registerFormControl.confirmPassword.errors?.required">
+                                Confirm Password is required
+                            </span>
+                            <span class="danger"
+                                *ngIf="registerFormControl.confirmPassword.touched && registerFormControl.confirmPassword.errors?.passwordMismatch">
+                                Passwords doesnot match
+                            </span>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox"> I accept the Terms of Use & Privacy Policy.
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <button type="submit">Register Now</button>
+        </form>
+    </div>
+</div>

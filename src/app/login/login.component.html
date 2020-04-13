@@ -1,0 +1,68 @@
+<!-- <p>login works!</p> -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="mid">
+    <div class="row">
+        <div class="col card">
+          <div class="c1">
+            <div class="c11">
+              <h1 class="mainhead">WELCOME BACK</h1>
+              <p class="mainp">Many customers are waiting for your presence... <br>LOGIN soon...</p>
+            </div>
+            <div id="left" ><h1 class="s1class"><span >SIGN</span><span class="su">IN</span>
+            </h1></div>
+            <div id="right"routerLink="/signup" routerLinkActive="active"><h1 class="s2class"><span>SIGN</span><span class="su">UP</span></h1></div>
+            
+          </div>
+        </div>
+         <div class="col card">
+          <div class="c2">
+            <form class="signin form" [formGroup]="registerForm" (ngSubmit)="onSubmit()" >
+                
+              
+                <h1 class="signup1">SIGN IN</h1>
+                <br>
+                <div class="form-group">
+                  <input name="username" type="text" placeholder="Username*" class="username form-control" formControlName="name"/>
+                  <span class="danger"
+                  *ngIf="(registerFormControl.name.touched || submitted) && registerFormControl.name.errors?.required">
+                  Name is required
+                  </span>
+                </div>
+    
+                <div class="form-group">
+                   <input name="password"  formControlName="password" type="password" placeholder="Password*" class="username form-control"/>
+                   <span class="danger"
+                   *ngIf="(registerFormControl.password.touched || submitted) && registerFormControl.password.errors?.required">
+                   Password is required
+               </span>
+               <span class="danger"
+                   *ngIf="registerFormControl.password.touched && registerFormControl.password.errors?.invalidPassword">
+                   Password should have minimum 8 characters,<br> at least 1 uppercase letter, 1 lowercase
+                   letter and 1 number
+               </span>
+                </div>
+                <button class="btn" type="submit">Get Started</button>
+                
+            
+                <div class="signup3"><input type="checkbox">Remember login?</div>
+                
+                <a href=""><p class="signup3">Forget Password?</p></a>
+                <hr style="width: 75%;align-items: center; color:#546277;">
+                <div class="signup2">Or signup with<br>
+                    <div style="display: inline;margin-left: 6%;" >
+                    <a href="" class="fa   fa-facebook"></a>
+                    <a href="" class="fa   fa-twitter"></a>
+                    <a href="" class="fa  fa-google"></a>
+                    <a href="" class="fa  fa-instagram"></a>
+                    <a href="" class="fa  fa-pinterest"></a>
+                    </div>
+                </div>
+             </form>
+             
+        </div>
+           </div>
+      </div>
+  </div>
+  
+  
+  

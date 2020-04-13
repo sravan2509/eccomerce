@@ -1,0 +1,41 @@
+/* .box
+{
+    background-color: white;
+    padding:2em;
+    box-shadow: 0 0 2px 2px gray;
+    
+} */
+
+.d
+{
+    padding:5% 250px 0 250px;
+    
+}
+
+.sidenav {
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    height:800px;
+    box-shadow: 0 0 2px 2px gray;
+    overflow-x: hidden;
+    padding: 8px 0;
+  }  
+ .x
+ {
+     padding-top: 20px;
+     /* position: fixed ; */
+     padding-left: 20px;
+ }
+ .picture{
+    border-radius: 150%;
+    border:solid;
+  }
+  .start
+  {
+      padding-top: 30px;
+  }
+ .y
+ {
+    padding:7% 0 0 50%;
+ }

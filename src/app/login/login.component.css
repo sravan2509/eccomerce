@@ -1,0 +1,199 @@
+.c1{
+    box-shadow:0 0 10px grey;
+    background-color:white;
+    width:300px;
+    height:500px;
+    /* display:inline-block; */
+    border-radius:15px 0px 0px 15px;
+ }
+ 
+ .c11{
+    background-image:url('../../assets/farm.jpg');
+    background-size:300px 400px;
+    background-repeat: no-repeat;
+    background-color:rgb(27, 24, 24);
+    width:300px;
+    height:400px;
+    /* display:inline-block; */
+    position:absolute;
+    z-index:4;
+    border-radius:15px 0px 200px 200px;
+ }
+ .c12{width:300px;
+   background-color: blueviolet;
+   height:100px;
+ margin-bottom: 0px;
+ margin-top: 400px;}
+  #left, #right {
+    color:white;
+    display: inline-block;
+    width:146px;
+    height: 500px;
+    background-color:white;
+    cursor:pointer;
+ }
+ #left{
+    border-radius:15px 0px 0px 15px;
+ }
+ #right{
+    border-radius:15px 15px 15px 0px;
+ }
+ #left:hover{
+    color:#EE9BA3;
+    box-shadow: 5px 0 18px -10px #333;
+    z-index:1;
+    position:absolute;
+ }
+ #right:hover{
+    box-shadow: -5px 0 15px -10px #333;
+    z-index:1;
+    position:absolute;
+ }
+ .s1class{
+   color:rgb(216, 97, 61);
+    position:absolute;
+    bottom:0;
+    left:63%;
+    margin-left: -50%;
+    
+ }
+ .s1class span,  .s2class span{
+    display:block;
+    /* font-size: 24px; */
+
+ }
+ .su{
+    font-size:20px;
+ }
+ .s2class{
+    color:#748194;
+    position:absolute;
+    bottom:0;
+    right:63%;
+    margin-right: -50%;
+ } 
+ .s1class:hover,.s2class:hover,.su:hover{color:rgb(216, 97, 61);}
+ .mainhead{ 
+    color:white;
+    font-size:24px;
+    text-align:center;
+    margin-top:50px;
+ }
+ .mainp{
+    color:white;
+    font-size:13px;
+    text-align:center;
+    margin-top:10px;
+ }
+ .mainp1{
+   color:black;
+   font-size:13px;
+   text-align:center;
+   margin-bottom:40px;
+ 
+ }
+ .row{
+    column-gap: 0px;
+ width: 600px;
+ /* padding: 0 0 0 300px; */
+}
+ .col{
+   width: 300px;
+   height: 500px;
+   border:none;
+ }
+ 
+ .c2{
+    background-color:rgb(48, 211, 42);
+    width:300px;
+    height:500px;
+    border-radius: 0px 15px 15px 0px ;
+    position:absolute;
+    left:auto;
+    display:inline-block;
+ }
+ .username{
+    font-weight: bold;
+    width: 200px;
+    margin: 0 35px 20px ;
+    height: 35px;
+    padding: 6px 15px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: #F6F7F9;
+    color: #748194;
+    font-size: 14px;
+ }
+ .btn{
+    font-weight: bold;
+    width: 230px;
+    margin: 0 35px 20px ;
+    height: 45px;
+    padding: 6px 15px;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    background: #EE9BA3;
+    color: white;
+    font-size: 14px;
+ }
+ .signup1{
+    color:#748194;
+    font-size:30px;
+    text-align:center;
+    margin-top: 10px;
+ }
+ a{
+    text-decoration: none;
+ }
+ .signup2{
+    color:#14171d;
+    font-size:16px;
+    text-align:center;
+ }/*
+ .signup{
+    display:initial;
+ }*/
+ .signin{
+    display:initial;
+ } 
+ 
+ 
+ 
+
+ 
+ .signup3{
+   color:rgb(36, 36, 37);
+   font-size:12px;
+   text-align:center;
+   align-items: center;
+ }
+ 
+ .fa {
+   padding: 14px;
+   font-size: 30px;
+   width: 50px;
+   text-align: center;
+   text-decoration: none;
+ }
+ 
+ /* Add a hover effect if you want */
+ .fa:hover {
+   opacity: 0.7;
+ }
+ .fa-facebook {color:white }
+ .fa-twitter {color: white}
+ .fa-google  {color: white} 
+ .fa-instagram{color:white}
+ .fa-pinterest{color:white}
+ .danger{
+   font-size: 12px;
+   padding-top: -5%;
+   margin-left:10%;
+   align-items: center;
+   color:rgb(247, 77, 10);
+ }
+ .mid{
+    padding: 60px 0 0 380px;
+ }
