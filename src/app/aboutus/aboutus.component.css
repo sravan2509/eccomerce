@@ -1,91 +1,118 @@
-html{
-    scroll-behavior: smooth;
-}
-
-.contentmove{
-    margin-top: 10%;
-}
-
-.vl {
-    margin-top: 1%;
-    border-left: 6px solid green;
-    height: 204px;
-  }
-
-.selling{
-    background-color: #4ABB86;
-}
-.font{
-    font-size: 12px;
-}
-.font1{
-    font-size: 14px;
-}
-.font2{
-    font-size: 16px;
-}
-.font3{
-    font-size: 24px;
-}
-
- /* department for why to choose us */
-
-  .cards {
-    border: none;
-  }
-
-  .cardmove{
-      background-color: #26DA97;
-  }
-
-/* about transportation */
-
-.textmove{
-    margin-top: 0%;
-}
-.textmove:hover{
-    background-image: url('../../assets/plane.gif');
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* color: lavender; */
-}
-.tr {
-    margin-top: 1%;
-    border-left: 6px solid black;
-    height: 100px;
-  }
-
-  .textmove1{
-    margin-top: 0%;
-}
-.textmove1:hover{
-    background-image: url('../../assets/customercare1.gif');
-    background-repeat: no-repeat;
-    background-size: cover;
-    /* color: lavender; */
-}
-
-/* frequently asked questions */
-
-.questions{
-    margin-top: 6%;
-}
-
-/* at final */
-
-.samerow{
-    display: inline;
-    /* margin-left: 2%; */
-    cursor: pointer;
-  }
-
-  .samesize{
-    width:30px;
-    height: auto;
-    margin-left: 1.5%;
-}
-
-.borderline{
-    border: none;
-}
-
+.row{
+    width: 100%;
+    }
+    
+    html{
+        scroll-behavior: smooth;
+    }
+    
+    .contentmove{
+        margin-top: 10%;
+    }
+    
+    .vl {
+        margin-top: 1%;
+        border-left: 6px solid green;
+        height: 214px;
+      }
+    
+    .selling{
+        background-color: #4ABB86;
+    }
+    .font{
+        font-size: 12px;
+    }
+    .font1{
+        font-size: 14px;
+    }
+    .font2{
+        font-size: 16px;
+    }
+    .font3{
+        font-size: 24px;
+    }
+    
+     /* department for why to choose us */
+    
+       
+    
+      .cards {
+        border: none;
+        /* border:1px solid gray; */
+        height:400px
+      }
+    
+      .cardmove{
+          background-color: #26DA97;
+         
+      }
+    /* about transportation */
+    
+    .textmove{
+        margin-top: 0%;
+    }
+    .textmove:hover{
+        /* background-image: url('../../assets/plane.gif'); */
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* color: lavender; */
+    }
+    .tr {
+        margin-top: 1%;
+        border-left:6px solid green;
+        height: 100px;
+      }
+    
+      .textmove1{
+        margin-top: 0%;
+    }
+    .textmove1:hover{
+        /* background-image: url('../../assets/customercare1.gif'); */
+        background-repeat: no-repeat;
+        background-size: cover;
+        /* color: lavender; */
+    }
+    
+    /* frequently asked questions */
+    
+    .questions{
+        margin-top: 6%;
+    }
+    
+    /* at final */
+    
+    .samerow{
+        display: inline;
+        /* margin-left: 2%; */
+        cursor: pointer;
+      }
+    
+      .samesize{
+        width:30px;
+        height: auto;
+        margin-left: 1.5%;
+    }
+    
+    .borderline{
+        border: none;
+    }
+    
+    .col-sm-10 
+    {
+        padding-left: 620px;
+      
+    }
+    .l{
+        overflow-x: hidden;
+    }
+     .col-10
+    {
+        padding-left: 40px;
+    }
+    .col-sm-6 .x{
+        padding-left: 280px;
+    }
+    .xyz:hover
+    {
+        transform:scale(1.2);
+    }
