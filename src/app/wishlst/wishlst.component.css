@@ -125,4 +125,25 @@
     .card1:hover {
     transform:rotateY(180deg);
     transition-duration: 2s }
-       
+       .row
+       {
+           width:100%;
+       }
+    .delete:hover{
+        transform:scale(1.6);
+    }
+.col-sm-3
+{
+    padding-left: 50px;
+}
+.col-md-1
+{
+    padding-left: 68px;   
+}
+.col-sm-12
+{
+    padding-left: 22px;
+}
+.card0:hover{
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
+}

@@ -21,31 +21,39 @@ import { MainComponent } from './main/main.component';
 
 const routes: Routes = [
   {path:'',redirectTo:'/home',pathMatch:"full"},
+  //done
   {path:'home',component:LandingComponent},
-  {
-    path:'account',component:PersonalinfoComponent,
+  {path:'login',component:LoginComponent},
+  {path:'signup',component:SignupComponent},
+  {path:'addwish',component:WishlstComponent},
+  {path:'cart',component:MycartComponent},
+  {path:'about',component:AboutusComponent},
+
+
+//need to be done
+  {path:'account',component:PersonalinfoComponent,
     // children:[
     //   {path:'address',component:AddressesComponent},
     //   {path:'orders',component:OrdersComponent},
     //   {path:'wishlist',component:WishlistComponent},
     // ]
   },
-  {path:'login',component:LoginComponent},
-  {path:'signup',component:SignupComponent},
-  {path:'address',component:AddressesComponent},
-    {path:'orders',component:OrdersComponent},
-    {path:'wishlist',component:MywishlistComponent},
-    {path:'personalinfo',component:PersonalinfoComponent},
-    {path:'about',component:AboutusComponent},
-    {path:'addwish',component:WishlstComponent},
-    {path:'product',component:ProductComponent},
-    {path:'cart',component:MycartComponent},
+  {path:'orders',component:OrdersComponent},
+  {path:'wishlist',component:MywishlistComponent},
+  {path:'personalinfo',component:PersonalinfoComponent},
+
+
+//noneed
     {path:'form',component:AddformComponent},
+    {path:'address',component:AddressesComponent},
+
+    
+//teja
     {path:'proDetails',component:ProDetailsComponent},
     {path:'cat',component:CatComponent},
     {path:'ma',component:MainComponent},
-    // {path:'form',component:AddformComponent},
     {path:'**',component:PagenotfoundComponent},
+    {path:'product',component:ProductComponent},
 ];
 
 

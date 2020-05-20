@@ -1,49 +1,50 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Country Man</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-   
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg " style="background-color: rgb(138, 241, 138);">
-        <a class="navbar-brand h1 font-weight-bolder" routerLink="/home" routerLinkActive="active">Contry Man</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
+<header class="header_area sticky-header mb-5">
+  <div class="main_menu">
+    <nav class="navbar navbar-expand-lg navbar-light main_box">
+      <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <a class="navbar-brand h1 font-weight-bolder"herf="#" ><img src="../assets/weblogo.png" alt="" style="height: 50px;padding: 0;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" style="border:  solid 2px black;outline: none;">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
         </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto ml-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="#" style="color: black;"routerLink="/home" routerLinkActive="active">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" style="color: black;" routerLink="/about" routerLinkActive="active">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" style="color: black;" routerLink="/product" routerLinkActive="active">Shop</a>
-            </li>
-            <li class="nav-item">
-              <button class="btn bg-light signin" style="color: black;" routerLink="/login" routerLinkActive="active">sign in</button>
-            </li>
-           
-          
-           
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
+          <ul class="nav navbar-nav menu_nav ml-auto">
+            <li class="nav-item active"><a class="nav-link" href="#" routerLink="/home" routerLinkActive="active">Home</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#" routerLink="/product" routerLinkActive="active">Shop</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#" routerLink="/about" routerLinkActive="active">About</a></li>
           </ul>
-          <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" style="color: white;">
-            <button class="btn  my-2 my-sm-0" type="submit">Search</button>
-          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="nav-item submenu dropdown">
+              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
+               aria-expanded="false"><span class="fa fa-user"></span></a>
+              <ul class="dropdown-menu">
+                <li class="nav-item"><a class="nav-link"  routerLink="/login" routerLinkActive="active"><span class="fa fa-sign-in"  style="padding-right: 20px;"></span>Login</a></li>
+                <li class="nav-item"><a class="nav-link"  routerLink="/signup" routerLinkActive="active"><span class="fa fa-user-plus"style="padding-right: 20px;"></span>Register</a></li>
+              </ul>
+            </li>
+            <li class="nav-item"><button  class="cart"><span class="fa fa-shopping-bag"></span>
+            </button></li>
+            <li class="nav-item">
+              <button class="search"><span class="fa fa-search" id="search" (click)='onsearch()'></span></button>
+            </li>
+          </ul>
         </div>
-      </nav>
-    
-</body>
-
-</html>
+      </div>
+    </nav>
+  </div>
+  <div class="search_input" id="search_input_box" *ngIf=searched>
+    <div class="container">
+      <form class="d-flex justify-content-between">
+        <input type="text" class="form-control" id="search_input" placeholder="Search Here">
+        <button type="submit" class="btn"></button>
+        <span class="fa fa-close" id="close_search" title="Close Search" (click)='offsearch()'></span>
+      </form>
+    </div>
+  </div>
+</header>
 
 <router-outlet></router-outlet>
