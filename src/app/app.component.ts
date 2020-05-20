@@ -7,4 +7,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'ecom';
+  public searched;
+  onsearch(){
+    this.searched=true;
+  }
+  offsearch(){
+    this.searched=false
+  }
 }

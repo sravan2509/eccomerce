@@ -1,5 +1,5 @@
-<div class="container">
-    <div class="maincon">
+<div class="container mt-5">
+    <div class="maincon mt-2">
       <i>You have </i><b style="color: rgb(241, 63, 63);">1</b> <i>  item in your cart!</i>
     </div>
     
@@ -14,107 +14,139 @@
         </div>
     </div>    
         <br>
-    <div class="card cardsty"  style="overflow: hidden;">
-        <div class="row " style="background-color: rgba(129, 5, 77, 0.788);">
-            <div class="col" style="font-size: 14px;text-align: center;padding-left:20px 5px 5px 5px;font-weight: bolder;">CURRENTLY YOU ARE IN YOUR SHOPPING CART</div>
-             <div class="col"></div>
-        </div>
-     <div class="row" >
-        <div class="col-md-12">
-     <div  class="row" style="border-bottom: 1px solid ;background-color: cornsilk;">
-        <div class="col-md-5 head">ITEM</div>
-        <div class="col-md-2 head">ITEM PRICE</div>
-        <div class="col-md-2 head">QUANTITY</div>
-        <div class="col-md-2 head">PRICE</div>
-    </div>
-    <div class="row">
-            <div class="col-md-5">
-                <div class="row">
-                    <div class="col head"><img src="../../assets/badam.webp" alt=""></div>
-                    <div class="col head pdetail" >
+    
+<div class="page">
+ 
+<table class="layout display responsive-table">
+    <thead>
+        <tr>
+            <th>S.NO</th>
+            <th>ITEM</th>
+            <th>ITEM PRICE</th>
+            <th>QUANTITY</th>
+            <th>PRICE</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+
+           
+           <tr>
+            <td class="organisationnumber">1</td>
+            <td class="organisationname">
+                <div class="row ">
+                    <div class="col head "><img src="../../assets/badam.webp" alt=""style="height:105px"></div>
+                    <div class="col head " >
                         <b><i style="color: rgba(9, 23, 105, 0.952);">BADAM PACK</i></b><br>
                         Quality:1NO<br>
                         Quantity/pack:200gm<br>
                         <p style="color: goldenrod;">Avaliable in stoke</p>
                     </div>
                 </div>
-            </div>
-            <div class="col-md-2 head pdetail1"><b>Rs.156</b><br><span style="font-size: 14px;">MRP:Rs.212</span><br><span style="color: darkgreen;">Discount:36%</span></div>
-            <div class="col-md-2 head pdetail1">
-                <select  class="inc"name="select" #qun>
-                    <option  selected>1</option>
-                    <option *ngFor ="let i of [2,3,4,5]">{{i}}</option>
-                </select> <br>
-                <button class="btnup" (click)="quality(qun.value)">update</button><br>
-                <span><i class="fa fa-remove"></i> Remove item</span><br>
-                <span><i class="fa fa-heartbeat"></i> Move to favourite</span>
-
-            </div>
-            <div class="col-md-2 head" *ngIf="update;else elseBlock">Rs.{{price}}/-</div>
-            <ng-template #elseBlock><div class="col-md-2 head">Rs.156/-</div>
-            </ng-template>
-            
-        </div>
-       
-           <div class="row" style="background-color: cornsilk;" >
-            <div class="col-md-9" style="text-align: right; font-size: 14px;">SUBTOTAL:</div>
-           <div class="col-md-2 head" *ngIf="update;else elseBlock">Rs.{{price}}/-</div>
-           <ng-template #elseBlock><div class="col-md-2 head">Rs.{{p}}/-</div>
-           </ng-template></div>
-           <div class="row" style="background-color: cornsilk;">
-            <div class="col-md-9" style="text-align: right;font-size: 14px;">*ESTIMATED TAX TO BE COLLECTED:</div>
-           <div class="col-md-2" style="text-align: center;">Rs.{{tax}}/-</div></div>
-        
-        <div class="row" style="background-color: rgba(114, 148, 240, 0.425);">
-            <div class="col-md-9" style="text-align: right;font-size: 14px;">TOTAL PRICE:</div>
-            <div class="col-md-2 head" *ngIf="update;else else1Block">Rs.{{price+tax}}/-</div>
-            <ng-template #else1Block><div class="col-md-2 head">Rs.{{p+tax}}/-</div>
-            </ng-template>
-        </div>
-        
-        
-        </div>
-        </div>
-    </div>  
-    <div class="row"><div class="col"> 
-        <div class="container text-center mt-5 mb-4">
-            <div style="font-size: 16px;">Shop By Places</div>
-        </div>
-        <div class="pcon">
-            <a href="" class="item head" ><img src="../../assets/Hyderabad1.jpg" alt="">HYDERABAD</a>
-            <a href="" class="item head"><img src="../../assets/srinagar.jpg" alt="">SRINAGAR</a>
-            <a href="" class="item head"><img src="../../assets/delhi.jpg" alt="">DELHI</a>
-            <a href="" class="item head"><img src="../../assets/bengaluru1.jpg" alt="">BENGALURU</a>
-            <a href="" class="item head"><img src="../../assets/jaipur.jpg" alt="">JAIPUR</a>
-            <a href="" class="item head"><img src="../../assets/shimla.webp" alt=""> SHIMLA</a>
-
-        </div>
-    </div></div> 
+            </td>
+            <td class="mt-0">
+                <div class=" head pdetail1"><b>Rs.156</b><br><span style="font-size: 14px;">MRP:Rs.212</span><br><span style="color: darkgreen;">Discount:36%</span></div>
+            </td>
+            <td>
+                <div class=" head pdetail1">
+                    <select  class="inc"name="select" #qun>
+                        <option  selected>1</option>
+                        <option *ngFor ="let i of [2,3,4,5]">{{i}}</option>
+                    </select> <br>
+                    <button class="btnup" (click)="quality(qun.value)">update</button><br>
+                    <span><i class="fa fa-remove"></i> Remove item</span><br>
+                    <span><i class="fa fa-heartbeat"></i> Move to favourite</span>
     
-    <div class="row"><div class="col"> 
-        <div class="container text-center mt-5 mb-4">
-            <div style="font-size: 16px;">Shop By Category</div>
-        </div>
-        <div class="pcon">
-            <a href="" class="item " style="font-size: 14px;"><img src="../../assets/dried-fruits-1.jpg" alt="">DRY FRUITS</a>
-            <a href="" class="item " style="font-size: 14px;"><img src="../../assets/homecare.jpg" alt="">HOME CARES</a>
-            <a href="" class="item " style="font-size: 14px;"><img src="../../assets/homedecoration.jpg" alt="">HOME DECORS</a>
-            <a href="" class="item " style="font-size: 14px;"><img src="../../assets/immunity.jpg" alt="">IMMUNITY BOOSTERS</a>
-            <a href="" class="item " style="font-size: 14px;"><img src="../../assets/fruits and vegitables.jpg" alt="">FRUITS & VEGETABLES</a>
-            <a href="" class="item " style="font-size: 14px;"><img src="../../assets/organic-oils.jpg" alt="">ORGANIC OILS</a>
+                </div>
+            </td>
+           <td>
+            <div class=" head " *ngIf="update;else elseBlock">Rs.{{price}}/-</div>
+            <ng-template #elseBlock><div class=" head">Rs.1556/-</div>
+            </ng-template>
+            </td>
+           </tr>
+    </tbody>
+
+         <tfoot>
+            
+             <tr><td style="text-align: right; font-size: 14px;" colspan="4">
+               SUBTOTAL:</td>
+               <td class="head"colspan="1" *ngIf="update;else elseBlock">Rs.{{price}}/-</td>
+               <ng-template #elseBlock ><div class="head">Rs.{{p}}/-</div>
+               </ng-template></tr>
+             <tr >
+                    <td  colspan="4"style="text-align: right;font-size: 14px;">*ESTIMATED TAX TO BE COLLECTED:</td>
+                   <td  colspan="1"style="text-align: center;">Rs.{{tax}}/-</td>
+                
+                
+             </tr>
+             <tr style="background-color: rgba(114, 148, 240, 0.425);">
+                    <td colspan="4" ><div style="text-align: right;font-size: 14px;">TOTAL PRICE:</div></td>
+                    <td  colspan="1"><div class=" head"  *ngIf="update;else else1Block">Rs.{{price+tax}}/-</div></td>
+                    <ng-template #else1Block><div class=" head">Rs.{{p+tax}}/-</div>
+                    </ng-template>
+                
+             </tr>
+           
+         </tfoot>  
+   
+
+</table>
+
+</div> 
+    
+
+    <div class="container  mt-5">
+        <div class="h3 font3" style="color: rgb(102, 7, 78); margin-left: 10%;">Shop By Places
+            <hr style= "  width: 80%; align-items:left;height:1.75px;background-color: rgba(0, 0, 0);margin-top: -2px;">
+    </div>
+    </div>
+    <div class="container text-center mt-5 mb-4">
+        <div class="row mx-3">
+            <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/Hyderabad1.jpg" class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2">HYDERABAD</h2> </div></div>
+            <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/srinagar.jpg"   class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2">SRINAGAR </h2> </div></div>
+            <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/delhi.jpg"      class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2">DELHI    </h2> </div> </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/delhi.jpg"      class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2">DELHI    </h2> </div></div>
+            <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/bengaluru1.jpg" class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2">BENGALUR </h2> </div></div>
+            <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/jaipur.jpg"     class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2">JAIPUR   </h2> </div> </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/shimla.webp"    class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2"> SHIMLA  </h2> </div> </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/shimla.webp"    class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2"> SHIMLA  </h2></div> </div>
 
         </div>
-    </div></div> 
+    </div>
+    
+
+    <div class="container  mt-5">
+        <div class="h3 font3" style="color: rgb(102, 7, 78); margin-left: 10%;">Shop By categories
+            <hr style= "  width: 80%; align-items:left;height:1.75px;background-color: rgba(0, 0, 0);margin-top: -2px;">
+    </div>
+    </div>
+    <div class="container text-center mt-5 mb-4">
+        <div class="row mx-3">
+            <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/dried-fruits-1.jpg" class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2">DRYFRUITS</h2> </div></div>
+            <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/homecare.jpg"   class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2">HOMECARE </h2> </div></div>
+            <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/homedecoration.jpg"      class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2">HOMEDECORS    </h2> </div> </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/immunity.jpg"      class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2">IMMUNITYBOOSTERS    </h2> </div></div>
+            <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/fruits and vegitables.jpg" class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2">FRUITS </h2> </div></div>
+            <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/organic-oils.jpg"     class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2">ORGANICOILS   </h2> </div> </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/beverages.jpg"    class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2"> BEVERAGES  </h2> </div> </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/organic-snack.jpg"    class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2"> SNACKS  </h2></div> </div>
+
+        </div>
+    </div>
+
     <div class="container  mt-5 mb-4">
-    <div class="row"><div class="col-md-1.5"><button style="color: rgb(33, 230, 43);padding: 5px;border-radius: 5px;" routerLink="/ma" routerLinkActive="active">continue shoping</button></div>
-    <div class="col-md-5 s">for more advantages....</div>
-    <div class="col-md-5" style="float: right;"><button style="color: cornsilk;background-color: crimson;padding: 7px;border-radius: 4px;" >Proceed to Checkout   <i class="fa fa-shopping-cart"></i></button></div>
+    <div class="row">
+    <div class="col-md-6 my-2"style="display:flex"><button style="color: rgb(33, 230, 43);padding: 5px;border-radius: 5px;" routerLink="/ma" routerLinkActive="active">continue shoping</button><div class="font1" style="margin-top:20px;">For more advantages..</div></div>
+    <div class="col-md-6  " style="float: right;"><button style="color: cornsilk;background-color: crimson;padding: 7px;border-radius: 4px;" >Proceed to Checkout   <i class="fa fa-shopping-cart"></i></button></div>
    </div>
 </div>
+<hr size="40" class="my-4" >
+
 
 
    <div class="container text-center mt-5 mb-4">
-    <div style="font-size: 14px; text-align: right; font-weight: bolder;">
+    <div class="font1" style=" text-align: right; font-weight: bolder;">
       Have questions? The countryMan Customer Loyality Team is happy to help!<br>
       Call 24 hours a day-365 days a year.
     </div>
