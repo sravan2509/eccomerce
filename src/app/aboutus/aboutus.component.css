@@ -20,17 +20,36 @@
         background-color: #4ABB86;
     }
     .font{
-        font-size: 12px;
-    }
-    .font1{
+        font-size: 15px;
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+      
+      }
+      .font1{
         font-size: 14px;
-    }
-    .font2{
+        font-family: 'Roboto', sans-serif;
+        font-weight: 500;
+      
+      }
+      .font2{
         font-size: 16px;
-    }
-    .font3{
+        font-family: 'Poppins', sans-serif;
+       /* font-weight: bolder; */
+       
+      }
+      .font5{
+        font-size: 16px;
+        font-family: 'Poppins', sans-serif;
+       font-weight: bolder;
+       
+      }
+      .font3{
         font-size: 24px;
-    }
+        font-family: 'Poppins', sans-serif;
+      font-weight: bolder;
+      letter-spacing: 0.75px;
+      text-transform: capitalize;
+      }
     
      /* department for why to choose us */
     
