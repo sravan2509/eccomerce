@@ -1,3 +1,35 @@
+.font{
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+  
+  }
+  .font1{
+    font-size: 14px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+  
+  }
+  .font2{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+   /* font-weight: bolder; */
+   
+  }
+  .font5{
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+   font-weight: bolder;
+   
+  }
+  .font3{
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+  font-weight: bolder;
+  letter-spacing: 0.75px;
+  text-transform: capitalize;
+  }
+
 .card0{
     width: 95%;
     background-color: rgba(255, 205, 251, 0.788);
