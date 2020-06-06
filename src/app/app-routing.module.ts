@@ -28,6 +28,7 @@ const routes: Routes = [
   {path:'addwish',component:WishlstComponent},
   {path:'cart',component:MycartComponent},
   {path:'about',component:AboutusComponent},
+  {path:'wishlist',component:MywishlistComponent},
 
 
 //need to be done
@@ -39,7 +40,6 @@ const routes: Routes = [
     // ]
   },
   {path:'orders',component:OrdersComponent},
-  {path:'wishlist',component:MywishlistComponent},
   {path:'personalinfo',component:PersonalinfoComponent},
 
 
@@ -52,8 +52,9 @@ const routes: Routes = [
     {path:'proDetails',component:ProDetailsComponent},
     {path:'cat',component:CatComponent},
     {path:'ma',component:MainComponent},
-    {path:'**',component:PagenotfoundComponent},
     {path:'product',component:ProductComponent},
+    {path:'**',component:PagenotfoundComponent},
+ 
 ];
 
 

@@ -1,10 +1,50 @@
 .slider
 {
-    height: 400px;
+    height: 300px;
 border-style: solid;
-border-radius: 5px;
-border-color: black;
+border-radius: 1px;
+border-color: rgb(221, 218, 218);
+width:420px;
 
+}
+.font{
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+
+}
+.font1{
+  font-size: 14px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+
+}
+.font2{
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+ /* font-weight: bolder; */
+ 
+}
+.font5{
+  font-size: 16px;
+  font-family: 'Poppins', sans-serif;
+ font-weight: bolder;
+ 
+}
+.font3{
+  font-size: 24px;
+  font-family: 'Poppins', sans-serif;
+font-weight: bolder;
+letter-spacing: 0.75px;
+text-transform: capitalize;
+}
+
+/* ::-webkit-scrollbar {
+    width: 0px;
+    background: transparent;
+} */
+.p{
+padding:20px 0 0 60px;
 }
 
 /* .button{

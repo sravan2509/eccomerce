@@ -156,7 +156,8 @@
       transition-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66); }
   
   .checkbox {
-    position: relative; }
+    position: relative;
+   }
     .checkbox label {
       padding-left: 22px;
       cursor: pointer; }
@@ -187,7 +188,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       display: none;
-      content: 's'; }
+      content: '\2713';}
   
   @media (max-width: 991px) {
     .inner {

@@ -7,7 +7,7 @@
     <a href="#" class="google"><i class="fa fa-google"></i>google</a> 
     <a href="#" class="linkedin"><i class="fa fa-linkedin"></i>linkedin</a>
 </div>
-<div class="container mt-5">
+<div class="container mt-5 " style="padding-top: 30px;">
 <div class="row ">
         <div class="col-lg-6   contentmove">
             <blockquote class="blockquote text-right  float-left">
@@ -36,7 +36,7 @@
             <!-- card 1 -->
 
             <div class="card cardb mx-1 my-1 col-md-4 col-sm " style="border: none;">
-                <img src="../../assets/familybuy.jpg" class="card-img-top cardsall" alt="...">
+                <img src="../../assets/familybuy.jpg" style="height: 240px;" class="card-img-top cardsall" alt="...">
                 <div class="card-body">
                 <h5 class="card-title font2" style="color: rgb(114, 7, 7);">Diversity In selection</h5>
                 <p class="card-text font"  style="color: rgb(6, 3, 44);">A wide variety of Organic items are available.</p>
@@ -45,7 +45,7 @@
             <!-- card 2 -->
 
             <div class="card cardb mx-1 my-1 col-md-3.95 col-sm" style="border: none">
-                <img src="../../assets/famers-day.png" class="card-img-top cardsall" alt="...">
+                <img src="../../assets/famers-day.png" style="height: 240px;" class="card-img-top cardsall" alt="...">
                 <div class="card-body">
                 <h5 class="card-title font2" style="color: rgb(8, 110, 8);">Celebrate Famers Day</h5>
                 <p class="card-text font"  style="color: rgb(6, 3, 44);">We celebrate this day via various options.</p>
@@ -54,7 +54,7 @@
             <!-- card 3 -->
 
             <div class="card cardb mx-1 my-1 col-md-4 col-sm" style="border: none">
-                <img src="../../assets/farmers1.jpg" class="card-img-top cardsall" alt="...">
+                <img src="../../assets/farmers1.jpg" style="height: 240px;"class="card-img-top cardsall" alt="...">
                 <div class="card-body">
                 <h5 class="card-title font2" style="color: rgb(112, 75, 5);">Planet Sale</h5>
                 <p class="card-text font" style="color: rgb(6, 3, 44);">Waiting is over planet sale has been arrived.</p>
@@ -143,141 +143,29 @@
 </div>
 
  <div class="container xyz my-5" >
-    <div class="row pls mx-3 ml-xs-2 mr-xs-2">
-     <div class="col-lg-3 col-md-4  col-sm-6 card card__one" style="background-color: rgb(247, 206, 146);">
+    <div class="row pls mx-3 ml-xs-2 mr-xs-2" >
+     <div class="col-lg-3 col-md-6 col-sm-12 col-12 p-2 card card__one" style="background-color: rgb(247, 206, 146);" *ngFor="let x of popular;let i=index">
        
       <button class="likebtn">36K<i class="fa fa-heart"></i></button>
     
       <br>
-       <img src="../../assets/oil.jpg"  class="pic" >
+       <img src="{{x.img}}"  class="pic" style="height: 145px;">
        <div class="car ">
-        <h5 class="font2">Onions/<b>kg</b></h5>
-        <h5 class="font2">Msp:<b class="font1">Rs.50/-</b></h5>
-         <h5 class="font2">Sp:<b class="font1">Rs.35/-</b></h5>
+        <h5 class="font2">{{x.name}}/<b>{{x.quant}}</b></h5>
+        <h5 class="font2">Price:<b class="font1">Rs.{{x.cost}}/-</b></h5>
+         <h5 class="font2">MRP:<b class="font1">Rs.{{x.originalcost}}/-</b></h5>
 
          <div class="but" >
-         <button class="dbtn1">Add Cart<i  class="fa fa-cart-plus"></i></button>
-         <button class="dbtn2">View <i class="fa fa-eye"></i></button>
+              
+         <button class="dbtn2"  (click)="senddata(i)"  style="cursor: pointer;">{{x.carbutton}}<i class="fa fa-cart-plus"></i></button>
+         <button class="dbtn1" (click)="details(i)" routerLink="/proDetails" style="cursor: pointer;">View <i class="fa fa-eye"></i></button>
 
         </div>
        </div>
+       </div>
      </div>
-     <div class="col-lg-3 col-md-4  col-sm-6 card card__one" style="background-color :rgb(247, 206, 146);">
-        <button class="likebtn">28K<i class="fa fa-heart"></i></button>
-        <br>
-         <img src="../../assets/potato.webp" class="pic" >
-         <div class="car ">
-            <h5 class="font2">Potato/<b style="color: gray;">kg</b></h5>
-            <h5 class="font2">Msp:<b class="font1">Rs.30/-</b></h5>
-            <h5 class="font2">Sp:<b class="font1">Rs.23/-</b></h5>
-   
-            <div class="but" >
-            <button class="dbtn1">Add Cart<i  class="fa fa-cart-plus"></i></button>
-            <button class="dbtn2">View <i class="fa fa-eye"></i></button>
-   
-           </div>
-          </div>
-       </div>
-       <div class="col-lg-3 col-md-4  col-sm-6  card card__one" style="background-color:  rgb(247, 206, 146);">
-        <button class="likebtn">26K<i class="fa fa-heart"></i></button>
-        <br>
-         <img src="../../assets/turmeric.jpg" class="pic" style="height: 140px;">
-         <div class="car ">
-            <h5 class="font2">Turmeric Powder/<b style="color: gray;">1 kg</b></h5>
-            <h5 class="font2">Msp:<b class="font1">Rs.33/-</b></h5>
-            <h5 class="font2">Sp:<b class="font1">Rs.25/-</b></h5>
-   
-            <div class="but" >
-                <button class="dbtn2">View <i class="fa fa-eye"></i></button>
-                <button class="dbtn1">Add Cart<i  class="fa fa-cart-plus"></i></button>
-   
-           </div>
-          </div>
-       </div>
-       <div class="col-lg-3 col-md-4  col-sm-6  card card__one "style="background-color: rgb(247, 206, 146);">
-        <button class="likebtn">28K<i class="fa fa-heart"></i></button>
-        <br>
-         <img src="../../assets/butter.webp" class="pic" >
-         <div class="car ">
-            <h5 class="font2">Butter Pack/<b style="color: gray;">250 g</b></h5>
-            <h5 class="font2">Msp:<b class="font1">Rs.33/-</b></h5>
-            <h5 class="font2">Sp:<b class="font1">Rs.25/-</b></h5>
-   
-            <div class="but" >
-            <button class="dbtn1">Add Cart<i  class="fa fa-cart-plus"></i></button>
-            <button class="dbtn2">View <i class="fa fa-eye"></i></button>
-   
-           </div>
-          </div>
-       </div>
-       <!-- </div>
-       <div class="row pls1 mx-2"> -->
-        <div class="col-lg-3 col-md-4  col-sm-6  card card__one"style="background-color:  rgb(247, 206, 146);">
-            <button class="likebtn">20K<i class="fa fa-heart"></i></button>
-            <br>
-          <img src="../../assets/badam.webp"  class="pic" >
-          <div class="car ">
-            <h5 class="font2">Badam /<b style="color: gray;">1 kg</b></h5>
-            <h5 class="font2">Msp:<b class="font1">Rs.45/-</b></h5>
-            <h5 class="font2">Sp:<b class="font1">Rs.35/-</b></h5>
-   
-            <div class="but" >
-            <button class="dbtn1">Add Cart<i  class="fa fa-cart-plus"></i></button>
-            <button class="dbtn2">View <i class="fa fa-eye"></i></button>
-   
-           </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-4  col-sm-6  card card__one"style="background-color:  rgb(247, 206, 146);">
-            <button class="likebtn">25K<i class="fa fa-heart"></i></button>
-            <br>
-            <img src="../../assets/foroil.webp" class="pic" >
-            <div class="car ">
-                <h5 class="font2">Oil/<b style="color: gray;">1 lit</b></h5>
-                <h5 class="font2">Msp:<b class="font1">Rs.33/-</b></h5>
-                <h5 class="font2">Sp:<b class="font1">Rs.25/-</b></h5>
-       
-                <div class="but" >
-                <button class="dbtn1">Add Cart<i  class="fa fa-cart-plus"></i></button>
-                <button class="dbtn2">View <i class="fa fa-eye"></i></button>
-       
-               </div>
-              </div>
-          </div>
-          <div class="col-lg-3 col-md-4  col-sm-6   card card__one"style="background-color: rgb(247, 206, 146);">
-            <button class="likebtn">28K<i class="fa fa-heart"></i></button>
-            <br>
-            <img src="../../assets/tea.webp" class="pic" >
-            <div class="car ">
-                <h5 class="font2">Tea Powder/<b style="color: gray;">1 kg</b></h5>
-                <h5 class="font2">Msp:<b class="font1">Rs.33/-</b></h5>
-                <h5 class="font2">Sp:<b class="font1">Rs.25/-</b></h5>
-       
-                <div class="but" >
-                <button class="dbtn1">Add Cart<i  class="fa fa-cart-plus"></i></button>
-                <button class="dbtn2">View <i class="fa fa-eye"></i></button>
-       
-               </div>
-              </div>
-          </div>
-          <div class=" col-lg-3 col-md-4  col-sm-6  card card__one"style="background-color: rgb(247, 206, 146);">
-            <button class="likebtn">28K<i class="fa fa-heart"></i></button>
-            <br>
-             <img src="../../assets/chilli.webp" class="pic" style="height: 140px;">
-             <div class="car ">
-                <h5 class="font2">Chilli Powder/<b style="color: gray;">1 kg</b></h5>
-                <h5 class="font2">Msp:<b class="font1">Rs.33/-</b></h5>
-                <h5 class="font2">Sp:<b class="font1">Rs.25/-</b></h5>
-       
-                <div class="but" >
-                <button class="dbtn1">Add Cart<i  class="fa fa-cart-plus"></i></button>
-                <button class="dbtn2">View <i class="fa fa-eye"></i></button>
-       
-               </div>
-              </div>
-           </div>
-          </div>
-     </div>
+     
+         </div>
   
      
 <!-- showing our wide spreads -->
@@ -289,7 +177,7 @@
     </div>
 
 
-<button (click)="timer()" class="btn text-center  font1" style="margin-left: 80%;  margin-top:-20px;background-color: rgba(102, 9, 79, 0.596);" >And adding</button>
+<!-- <button (click)="timer()" class="btn text-center  font1" style="margin-left: 80%;  margin-top:-20px;background-color: rgba(102, 9, 79, 0.596);" >And adding</button> -->
 </div>
 
 <div class="container mt-5">
@@ -330,7 +218,7 @@
 
 
 <div class="container my-5 ">
-    <div class="row rowc  categories mx-3">
+    <div class="row rowc  categories mx-3 font5">
              <div class="card col-lg-3 col-md-4  col-sm-6  place1" style="border: none;">
                  <div class="card-body text-center">
                  <h5 class="card-title">Hyderabad</h5>
@@ -385,8 +273,8 @@
 
 <div class="container my-5">
     <form class="form-inline">
-        <input class="form-control mr-sm-2" type="email" placeholder="Enter email For Updates" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" style="background-color: rgb(138, 241, 138);color: black;border-radius: 4px;border-color: rgb(138, 241, 138);;">Sign In</button>
+        <input class="form-control mr-sm-2 font" type="email" placeholder="Enter email For Updates" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit" routerLink="/login" style="background-color: rgb(138, 241, 138);color: black;border-radius: 4px;border-color: rgb(138, 241, 138);">Sign In</button>
       </form>
 </div>
 
@@ -395,7 +283,7 @@
 
 <div class="containern mt-3 subscribe">
     <div class="h4 ml-5 font2">Want to Know about us More</div>
-    <a class="btn knowmore ml-5 font1" routerLink="/about" (click)="testMe()" target="_blank">What are you waiting for</a>
+    <a class="btn knowmore ml-5 font1" routerLink="/about" (click)="testMe()" >What are you waiting for</a>
 </div>
 
 

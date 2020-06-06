@@ -1,60 +1,333 @@
-<!-- <p>pro-details works!</p> -->
-<!-- <html>
-<head>
-<meta charset="utf-8" />
-<style>
-.preview {
-width:640px;
-height:360px}
-.thumb {
-width:205px;
-margin-right:3px;}
-.normal {
-border:3px solid #000000;}
-.selected {
-border:3px solid #ff0000;}
-</style>
-</head>
-<body>
-    <button (click)="teja()">vsakdh</button>
-<img id="0" class="preview normal" src="" alt="preview" /><br />
-<img id="1" class="thumb normal" src="../../assets/pista.jpg" alt="image1" onmouseover="preview(this)"/>
-<img id="2" class="thumb normal" src="../../assets/pista.jpg" alt="image2" onmouseover="preview(this)"/>
-<img id="3" class="thumb normal" src="../assets/bk_2.jpg" alt="image3" onmouseover="preview(this)"/>
-</body>
-</html> -->
 <head>
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-sm-6">
+
+
+
+<div class="container" style="padding-top: 140px;">
+<div *ngFor="let det of data;let i=index">
+    <div class="row" >
+        <div class="col-lg-5 col-md-5 col-sm-12 col-12">
             <div class="slider">
-                include pics here
+                <img src="{{det.img}}" class="p" style="height: 280px;">
             </div> <br>
-            
-                <button class="bn" style="margin-left: 100px;"><i class="fa fa-shopping-cart" style="margin-right: 10px;"></i>Add to cart</button>
-                
-                <button class="bn" style="margin-left: 240px;"><i class='fa fa-tags' style="margin-right: 10px;"></i>Buy now</button>
-                  
-                
-             
-        </div>
-        <div class="col-sm-6" style="overflow: auto; height: 500px;">
-            <div class="pos">
-            <div class="dls">
-                <h3 style="display: inline;">Product name</h3><button style="display: inline;margin-left: 400px;">share<i class="fa fa-share" style="margin-left: 5px;"></i></button>
-                <p><button class="button" style="background-color: rgb(10, 150, 57);border-radius:2px;border:none ;font-size: medium;color:white;">4.3<i class='fa fa-star' style="color:white;margin-left: 10px;"></i></button>(120)</p>
-
-                 <p>100 Items in stock</p>
-                 <h3 style="display: inline;padding-right: 10px;"><i class="fa fa-rupee"></i>150</h3>
-                 <h5 style="display: inline;"><del><i class="fa fa-rupee"></i>200</del>10% off</h5>
-                <h4>Quantity : 1Kg</h4>
-              <!-- <button>More Details</button> -->
-              <br>
-
             <div class="row">
+                <div class="col-lg-5 col-md-4 col-sm-5 col-5 font2">
+                <button class="bn"  (click)="senddata(i)" style="width:180px" ><i class="fa fa-shopping-cart" ></i>{{det.carbutton}}</button>
+                </div>
+            <div class="col-lg-1 col-md-5 col-sm-1 col-1"></div>
+            <div class="col-lg-5 col-md-3 col-sm-5 col-5 font2">
+                <!-- <button type="button" class="bn" data-toggle="modal" data-target="#myModal" style="width:180px" ><i class='fa fa-address-card'>  </i> Farmer Details</button> -->
+                <button type="button" class="bn" (click)="farmer()" style="width:180px" ><i class='fa fa-address-card'>  </i> Farmer Details</button>
+            </div> 
+            </div>
+        </div>
+<div class="col-lg-1 col-md-1 col-sm-1 col-1"></div>
+        <div class="col-lg-6 col-md-12 col-sm-12 col-12 " style="padding-left: 30px;">
+           <div class="row">
+                <h3 class="font3" style="display: inline;">{{det.name}}</h3>
+            </div>
+                
+               <div class="row">
+                <p><button class="button" style="background-color: rgb(10, 150, 57);border-radius:2px;border:none ;font-size: medium;color:white;padding:0 5px 0 5px">{{det.rating}}<i class='fa fa-star' style="color:white;margin-left: 10px;"></i></button></p>
+            </div>
+            <div class="row">
+                 <h3 class="font2" style="display: inline;padding-right: 10px;"><b>Price : </b> <i class="fa fa-rupee"></i>{{det.cost}}</h3>
+                </div>
+                <div class="row">
+                <h5 class="font2" style="display: inline;"><b>MRP : </b> <del><i class="fa fa-rupee"></i>{{det.originalcost}}</del></h5>
+            </div>
+            <div class="row">
+                <h5 class="font2" style="color: chocolate;"> <b>{{det.offer}} off</b></h5>
+            </div>
+            <div class="row">
+                <h4 class="font2" ><b>Quantity : </b>{{det.quant}}</h4>
+            </div>
+              
+              
+              <div class="row">
+                
+              <h3 class="font2"  style="display: inline;"><b>Seller : </b>ch.Srinivasa rao,tadepalligudem</h3>
+            </div>
+            <div class="row">
+                <h3 class="font2"  style="display: inline;"><b>Highlights : </b></h3>
+            </div>
+            <div class="row font2">
+                <p style="display: inline;">
+                    <li>purely organic</li>
+                    <li>best seller</li>
+                      <li>after chunk asset optimization SourceMapDevToolPlugin main 93% after chunk asset optimization SourceMapDevToolPlugin reso93% after chunk asset optimization SourceMapDevToolPlugin main  </li>
+                  </p>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div class="row" style="padding-top: 30px;padding-left: 30px;">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                    <div class="row ">
+                     <h3 class="font3" style="display: inline;">Rating & Reviews : </h3>
+                    </div>
+                </div>      
+            </div>
+                    
+    <div class="row" style="padding-top: 8px;">
+        <div class="col-lg-2 col-md-3 col-sm-3  col-3" >
+            <h2 class="font" style="display: inline;">4.3<i class="fa fa-star"  font-size="15px"></i></h2>
+            <p class="font2">113 Ratings &<br>
+            56 Reviews</p>
+        </div>
+        <div class="col-lg-10 col-md-9 col-sm-9 col-9" >
+            <div class="row">
+                <p class="font2">5<i class="fa fa-star"  font-size="15px"></i></p>
+                <div class="col-lg-5 col-md-9 col-sm-9 col-9" style="padding-top: 8px;">
+                    <div class="progress" style="height: 5px">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70"
+                        aria-valuemin="0" aria-valuemax="100" style="width:80%; ">
+                    </div>
+                      </div> 
+
+                 </div>
+                </div>
+                <div class="row">
+                    <p class="font2">4<i class="fa fa-star"  font-size="15px"></i></p>
+                    <div class="col-lg-5 col-md-9 col-sm-9 col-9" style="padding-top: 8px;">
+                        <div class="progress" style="height: 5px">
+                            <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70"
+                            aria-valuemin="0" aria-valuemax="100" style="width:60%; ">
+                        </div>
+                          </div> 
+    
+                     </div>
+                    </div>
+                    <div class="row">
+                        <p class="font2">3<i class="fa fa-star"  font-size="15px"></i></p>
+                        <div class="col-lg-5 col-md-9 col-sm-9 col-9" style="padding-top: 8px;">
+                            <div class="progress" style="height: 5px">
+                                <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70"
+                                aria-valuemin="0" aria-valuemax="100" style="width:25%; ">
+                            </div>
+                              </div> 
+        
+                         </div>
+                        </div>
+                        <div class="row">
+                            <p class="font2">2<i class="fa fa-star"  font-size="15px"></i></p>
+                            <div class="col-lg-5 col-md-9 col-sm-9 col-9" style="padding-top: 8px;">
+                                <div class="progress" style="height: 5px">
+                                    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70"
+                                    aria-valuemin="0" aria-valuemax="100" style="width:3%; ">
+                                </div>
+                                  </div> 
+            
+                             </div>
+                            </div>
+                            <div class="row">
+                                <p class="font2">1<i class="fa fa-star"  font-size="15px"></i></p>
+                                <div class="col-lg-5 col-md-9 col-sm-9 col-9" style="padding-top: 8px;">
+                                    <div class="progress" style="height: 5px">
+                                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70"
+                                        aria-valuemin="0" aria-valuemax="100" style="width:1%; ">
+                                    </div>
+                                      </div> 
+                
+                                 </div>
+                                </div>
+            </div>
+                     
+        </div>
+    </div>
+    <div class="container">
+<div class="row">
+    <div class="card_review">
+        <p class="font5"><button class="button" style="background-color: rgb(10, 150, 57);border-radius:2px;border: none;font-size: medium;color:white; margin-right: 10px;">4.3<i class='fa fa-star' style="color:white;margin-left: 10px;"></i></button><b>Very good</b>
+            <p class="font1">In this price its a good deal. There need to be some improvement though. Color is so bright but it doesnt lasts. Over all satisfied with the product in the price. If u have a big budget then go for the higher prices fabrics.</p>
+        </div>
+        <div class="card_review">
+            <p class="font5"><button class="button" style="background-color: rgb(10, 150, 57);border-radius:2px;border: none;font-size: medium;color:white; margin-right: 10px;">4.5<i class='fa fa-star' style="color:white;margin-left: 10px;"></i></button><b>Worth for money</b>
+                <p class="font1">In this price its a good deal. There need to be some improvement though. Color is so bright but it doesnt lasts. Over all satisfied with the product in the price. If u have a big budget then go for the higher prices fabrics.</p>
+        </div>
+        <div class="card_review">
+            <p class="font5"><button class="button" style="background-color: rgb(10, 150, 57);border-radius:2px;border: none;font-size: medium;color:white; margin-right: 10px;">3.8<i class='fa fa-star' style="color:white;margin-left: 10px;"></i></button><b>Satisfied</b>
+                <p class="font1">In this price its a good deal. There need to be some improvement though. Color is so bright but it doesnt lasts. Over all satisfied with the product in the price. If u have a big budget then go for the higher prices fabrics.</p>
+        </div>
+        <div class="card_review">
+            <p class="font5"><button class="button" style="background-color: rgb(10, 150, 57);border-radius:2px;border: none;font-size: medium;color:white; margin-right: 10px;">5<i class='fa fa-star' style="color:white;margin-left: 10px;"></i></button><b>recomended</b>
+                <p class="font1">In this price its a good deal. There need to be some improvement though. Color is so bright but it doesnt lasts. Over all satisfied with the product in the price. If u have a big budget then go for the higher prices fabrics.</p>
+        </div>
+        <a href="#" class="font1">view more</a> 
+    </div>
+    
+</div>
+
+<div class="container" style="padding-top: 20px;">
+  
+        <h3 class="font3">FAQs</h3>
+        <p class="font5"><b>Q : Is it 100% organic?</b></p>
+        <p class="font2">A : yes</p>
+
+        <p class="font5"><b>Q : Is it 100% organic?</b></p>
+        <p class="font2">A : yes</p>
+
+        <p class="font5"><b>Q : How is the quality of items?</b></p>
+        <p class="font2">A : Good Quantity products</p>
+
+        <p class="font5"><b>Q : Is it 100% organic?</b></p>
+        <p class="font2">A : yes</p>
+
+        <p class="font5"><b>Q : Is it 100% organic?</b></p>
+        <p class="font2">A : yes</p>
+
+        <a href="#" class="font1">view more</a>
+        <h3 class="font1">Have any questions?</h3>
+        <button class="font1">Post here</button>
+        
+</div>
+
+
+
+
+
+
+
+<!-- farmer -->
+
+    <div class="container">
+    
+      <!-- The Modal -->
+      <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content" style="padding-left: 10px;padding-top: 12px;">
+          
+            <p class="font2"><b>Name:</b>ch.SrinivasRao</p>
+            <p class="font2"><b>Place:</b>Tadepalligudem</p>
+            <p class="font2"><b>Contact:</b>999999999</p>
+            <p class="font2"><b>Address</b>Dno:2-101,Beside ONGC,main road,xxx mandal,xxx district</p>
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    
+   
+
+<!-- <div class="container" style="padding: 20px 0 0 0;" >
+    <h2>Similar products</h2>
+
+    <div class="row" style="padding: 20px 0 0 0;"> 
+        <div class="col-lg-3">
+            <div class="card" style="width:290px;" (click)="hi()">
+                <img class="card-img-top" src="../../assets/pista.jpg" alt="Card image" style="width:100%">
+                
+                <div class="card-body">
+                <h4 class="card-title">Badam pack of 1kg</h4>
+                <p><button class="button" style="background-color: rgb(10, 150, 57);border-radius:7px;border-color: rgb(10, 150, 57) ;font-size: medium;color:white;">4.3<i class='fa fa-star' style="color:white;margin-left: 10px;"></i></button>(120)</p>
+
+                <div class="card-text"> 
+                    <h3 style="display: inline;padding-right: 10px;"><i class="fa fa-rupee"></i>150</h3>
+                    <h5 style="display: inline;"><del><i class="fa fa-rupee"></i>200</del>10% off</h5>
+                    
+                </div>
+                <br>
+                <button class="btn_V" routerLink="/proDetails"><i class='fa fa-eye' style="margin-right:5px;"></i>view</button>
+                
+                <button class="btn_W"><i class='fa fa-heart' style="margin-right:5px;"></i>wishlist</button>
+            
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card" style="width:290px;" (click)="hi()">
+                <img class="card-img-top" src="../../assets/pista.jpg" alt="Card image" style="width:100%">
+                
+                <div class="card-body">
+                <h4 class="card-title">Badam pack of 1kg</h4>
+                <p><button class="button" style="background-color: rgb(10, 150, 57);border-radius:7px;border-color: rgb(10, 150, 57) ;font-size: medium;color:white;">4.3<i class='fa fa-star' style="color:white;margin-left: 10px;"></i></button>(120)</p>
+
+                <div class="card-text"> 
+                    <h3 style="display: inline;padding-right: 10px;"><i class="fa fa-rupee"></i>150</h3>
+                    <h5 style="display: inline;"><del><i class="fa fa-rupee"></i>200</del>10% off</h5>
+                    
+                </div>
+                <br>
+                <button class="btn_V" routerLink="/proDetails"><i class='fa fa-eye' style="margin-right:5px;"></i>view</button>
+                
+                <button class="btn_W"><i class='fa fa-heart' style="margin-right:5px;"></i>wishlist</button>
+            
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card" style="width:290px;" (click)="hi()">
+                <img class="card-img-top" src="../../assets/pista.jpg" alt="Card image" style="width:100%">
+                
+                <div class="card-body">
+                <h4 class="card-title">Badam pack of 1kg</h4>
+                <p><button class="button" style="background-color: rgb(10, 150, 57);border-radius:7px;border-color: rgb(10, 150, 57) ;font-size: medium;color:white;">4.3<i class='fa fa-star' style="color:white;margin-left: 10px;"></i></button>(120)</p>
+
+                <div class="card-text"> 
+                    <h3 style="display: inline;padding-right: 10px;"><i class="fa fa-rupee"></i>150</h3>
+                    <h5 style="display: inline;"><del><i class="fa fa-rupee"></i>200</del>10% off</h5>
+                    
+                </div>
+                <br>
+                <button class="btn_V" routerLink="/proDetails"><i class='fa fa-eye' style="margin-right:5px;"></i>view</button>
+                
+                <button class="btn_W"><i class='fa fa-heart' style="margin-right:5px;"></i>wishlist</button>
+            
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div class="card" style="width:290px;" (click)="hi()">
+                <img class="card-img-top" src="../../assets/pista.jpg" alt="Card image" style="width:100%">
+                
+                <div class="card-body">
+                <h4 class="card-title">Badam pack of 1kg</h4>
+                <p><button class="button" style="background-color: rgb(10, 150, 57);border-radius:7px;border-color: rgb(10, 150, 57) ;font-size: medium;color:white;">4.3<i class='fa fa-star' style="color:white;margin-left: 10px;"></i></button>(120)</p>
+
+                <div class="card-text"> 
+                    <h3 style="display: inline;padding-right: 10px;"><i class="fa fa-rupee"></i>150</h3>
+                    <h5 style="display: inline;"><del><i class="fa fa-rupee"></i>200</del>10% off</h5>
+                    
+                </div>
+                <br>
+                <button class="btn_V" routerLink="/proDetails"><i class='fa fa-eye' style="margin-right:5px;"></i>view</button>
+                
+                <button class="btn_W"><i class='fa fa-heart' style="margin-right:5px;"></i>wishlist</button>
+            
+                </div>
+            </div>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- <div class="row">
                 <div class="col-sm-3">
               <h3 style="display: inline;">Highlights : </h3>
                 </div>
@@ -67,15 +340,7 @@ border:3px solid #ff0000;}
                 </div>
             </div>
                 <br>
-            <div class="row">
-                <div class="col-sm-3">
-              <h3 style="display: inline;">Seller : </h3>
-                </div>
-                <div class="col-sm-9">
-             <p>ch.Srinivasa rao,tadepalligudem</p>
-                </div>
-            </div><br>
-
+            
             <div class="row">
                 <div class="col-sm-3">
               <h3 style="display: inline;">Description : </h3>
@@ -103,7 +368,7 @@ border:3px solid #ff0000;}
                 <div class="col-sm-9">
                     <div class="row">
                         <div class="col-sm-3">
-                            <h2 style="display: inline;">4.3</h2><i class="fa fa-star" style="margin-left:10px" font-size="15px"></i>
+                            <h2 style="display: inline;">4.3</hd2><i class="fa fa-star" style="margin-left:10px" font-size="15px"></i>
 
                             <p>113 Ratings &<br>
                             56 Reviews</p>
@@ -138,8 +403,7 @@ border:3px solid #ff0000;}
                                     
                                     </div>
                                   </div>
-                            </div>      
-                        </div>
+                        
 
                         <div class="row">
                             <div class="col-sm-2">
@@ -191,10 +455,10 @@ border:3px solid #ff0000;}
              
             </div>
             
-        </div>
+        </div> -->
 
         <!-- Reviews -->
-        <div class="card_review">
+        <!-- <div class="card_review">
         <p><button class="button" style="background-color: rgb(10, 150, 57);border-radius:2px;border: none;font-size: medium;color:white; margin-right: 10px;">4.3<i class='fa fa-star' style="color:white;margin-left: 10px;"></i></button><b>Very good</b>
             <p>In this price its a good deal. There need to be some improvement though. Color is so bright but it doesnt lasts. Over all satisfied with the product in the price. If u have a big budget then go for the higher prices fabrics.</p>
         </div>
@@ -210,10 +474,10 @@ border:3px solid #ff0000;}
             <p><button class="button" style="background-color: rgb(10, 150, 57);border-radius:2px;border: none;font-size: medium;color:white; margin-right: 10px;">5<i class='fa fa-star' style="color:white;margin-left: 10px;"></i></button><b>recomended</b>
                 <p>In this price its a good deal. There need to be some improvement though. Color is so bright but it doesnt lasts. Over all satisfied with the product in the price. If u have a big budget then go for the higher prices fabrics.</p>
         </div>
-        <a href="#">view more</a>
+        <a href="#">view more</a> -->
 
         <!-- questions -->
-        <h3>FAQs</h3>
+        <!-- <h3>FAQs</h3>
         <p><b>Q : Is it 100% organic?</b></p>
         <p>A : yes</p>
 
@@ -232,27 +496,14 @@ border:3px solid #ff0000;}
         <a href="#">view more</a>
         <h3>Have any questions?</h3>
         <button>Post here</button>
-
-
-
-            
-
-
-
-
-
-
-
-              
-              
             </div>
             </div>  
         </div>
        
     </div>
 
-
-  <h2>Similar products</h2>
+</div> -->
+  <!-- <h2>Similar products</h2>
 
     <div class="row">
         <div class="col-sm-2">
@@ -270,7 +521,7 @@ border:3px solid #ff0000;}
                 </div>
                 <br>
                 <button class="btn_V" routerLink="/proDetails"><i class='fa fa-eye' style="margin-right:5px;"></i>view</button>
-                <!-- <a routerLink="/proDetails" class="btn btn-primary">view</a> -->
+                
                 <button class="btn_W"><i class='fa fa-heart' style="margin-right:5px;"></i>wishlist</button>
             
                 </div>
@@ -291,7 +542,7 @@ border:3px solid #ff0000;}
                 </div>
                 <br>
                 <button class="btn_V" routerLink="/proDetails"><i class='fa fa-eye' style="margin-right:5px;"></i>view</button>
-                <!-- <a routerLink="/proDetails" class="btn btn-primary">view</a> -->
+               
                 <button class="btn_W"><i class='fa fa-heart' style="margin-right:5px;"></i>wishlist</button>
             
                 </div>
@@ -312,7 +563,7 @@ border:3px solid #ff0000;}
                 </div>
                 <br>
                 <button class="btn_V" routerLink="/proDetails"><i class='fa fa-eye' style="margin-right:5px;"></i>view</button>
-                <!-- <a routerLink="/proDetails" class="btn btn-primary">view</a> -->
+              
                 <button class="btn_W"><i class='fa fa-heart' style="margin-right:5px;"></i>wishlist</button>
             
                 </div>
@@ -333,7 +584,7 @@ border:3px solid #ff0000;}
                 </div>
                 <br>
                 <button class="btn_V" routerLink="/proDetails"><i class='fa fa-eye' style="margin-right:5px;"></i>view</button>
-                <!-- <a routerLink="/proDetails" class="btn btn-primary">view</a> -->
+                
                 <button class="btn_W"><i class='fa fa-heart' style="margin-right:5px;"></i>wishlist</button>
             
                 </div>
@@ -355,7 +606,7 @@ border:3px solid #ff0000;}
                 </div>
                 <br>
                 <button class="btn_V" routerLink="/proDetails"><i class='fa fa-eye' style="margin-right:5px;"></i>view</button>
-                <!-- <a routerLink="/proDetails" class="btn btn-primary">view</a> -->
+               
                 <button class="btn_W"><i class='fa fa-heart' style="margin-right:5px;"></i>wishlist</button>
             
                 </div>
@@ -377,7 +628,7 @@ border:3px solid #ff0000;}
                     </div>
                     <br>
                     <button class="btn_V" routerLink="/proDetails"><i class='fa fa-eye' style="margin-right:5px;"></i>view</button>
-                    <!-- <a routerLink="/proDetails" class="btn btn-primary">view</a> -->
+                    
                     <button class="btn_W"><i class='fa fa-heart' style="margin-right:5px;"></i>wishlist</button>
             
                 </div>
@@ -388,4 +639,4 @@ border:3px solid #ff0000;}
 
 
 
-</div>
+</div> -->

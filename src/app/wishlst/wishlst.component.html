@@ -5,21 +5,47 @@
 
 
    <h1 style="text-align: center;padding-top: 110px;"> <i class='fa fa-heart' ></i></h1>
-    <div class="card mt-2 mb-2 font3" style="border: none;text-align: center;padding-top: 0px;">My Wishlist</div>
-    <div *ngIf="people?.length > 0">
+    <div class="card mt-2 mb-2 font3" style="border: none;text-align: center;padding-top: 0px;">My Wishlist({{this.people.length}})</div>
+    <div *ngIf="!val">
+        <div class="row" style="align-items: center;">
+            <div class="col-lg-4 col-md-4 col-sm-3"></div>
+            <div class="col-lg-4 col-md-6 col-sm-7 col-12">
+            <div class="card mt-2 mb-5 " style="border: none;padding-top: 0px;"><img src="../../assets/emptywish.jpg" ></div>
+            </div>
+        </div>
+        <div class="row" >
+            <div class="col-12 font3" style="text-align: center;color: rgb(240, 201, 26);">
+                        <h5 >Your Wishlist is empty</h5>
+        </div>
+        <div class="row" >
+            <div class="col-12 font5" style="text-align: center;padding-left:10px">
+                        <h5 >Explore more & shortlist some items</h5>
+        </div>
+    </div>
+        <!-- <div class="row" style="padding: 0 0 0 37%;">
+            <h6 style="color: gray;">Tell us where you want your orders delivered</h6>
+        </div> -->
+        <div class="row " style="padding-top: 10px;" >
+            <div class="col-lg-5 col-md-5 col-sm-4 col-4"></div>
+            <div class="col-lg-4 col-md-6 col-sm-7 col-8 font" style="padding-left:30px">
+            <button style="background-color: rgb(241, 112, 20);;cursor: pointer;border-color: chocolate;color: white;"  routerLink="/cat" routerLinkActive="active">Start Shopping</button>
+        </div>
+        </div> 
+    </div>
+    </div>
+    <div *ngIf="val">
     <div *ngFor="let person of people ; let i=index;"> 
         <div class="card " style="border: none;">
         <div class="x">
         <div class="row mt-3 mb-2">
                    <div class="col-lg-2 col-md-4 col-sm-2 col-2">
-                     
                     </div>    
                   <div class="col-lg-8 col-md-6 col-sm-8 col-8">
                     <div class="card0">
                         <div class="row">
                             <div class="col-lg-5 col-md-1 col-sm-2">
                      <div class="card card-1 ">
-                         <img src= {{person.itemname}} alt="">
+                         <img src= "{{person.img}}" alt="">
                   </div>
                   </div>
                   <div class="col-lg-6 col-md-12 col-sm-12"> 
@@ -28,13 +54,13 @@
               <div class="col-lg-11 col-md-10 col-sm-10 col-8 head font5">{{person.name}}
                </div> 
               <div class="col-lg-1 col-md-1 col-sm-1 col-1" style="padding-left: 10px;">
-               <h4 style="cursor:pointer" class="delete" (click)="addNew(i)">  <span class="fa fa-trash"></span></h4>
+               <h4 style="cursor:pointer" class="delete" (click)="addNew(i,person.id)">  <span class="fa fa-trash"></span></h4>
                </div>
            </div>
                          <div class="para font2">
-                             <span>Price : {{person.price}}</span><br>
-                             <span>MRP : {{person.mrp}}</span><br>
-                             <span>Quantity/pack : {{person.quan}}</span><br>
+                             <span>Price : {{person.cost}}</span><br>
+                             <span>MRP : {{person.originalcost}}</span><br>
+                             <span>Quantity/pack : {{person.quant}}</span><br>
                              <span> <a style="background-color: rgb(53, 220, 20);color: wheat;"><i class="fa fa-star"></i>{{person.rating}} </a></span>
                          </div>
                          <div class="prd-bottom">
@@ -58,16 +84,15 @@
                       </div>
                       </div>
                       </div>
-                  
-                      </div>
+                  </div>
+                    
                   </div>
                  
-                  
+                 
                  
 
-
 </div>
-    <div class="card " style="border: none;">
+    <div class="card " style="border: none;padding-top: 50px;">
 
     <div class="center font3" style="font-weight: bolder; font-family: poppin;font-size: 24px;"> Shop Through  Your Favourite Categories</div>
 <div class="container  mt-5 mb-4">

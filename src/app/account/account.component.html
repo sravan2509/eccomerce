@@ -1,57 +1,90 @@
-<!-- <div class="box">
-
-</div> -->
-
-<!-- <div class="d"> -->
-<!-- <div class="b"> -->
-    <div class="sidenav">
-        <div class="x">
-            <input type="file" id="selectedFile" style="display: none;" onchange="previewFile()"/>
-            <img src="../../assets/user.png" height="200" alt="user.png" style="width:100px;height: 100px;" class="picture"> 
-           <br>
-           <br>
-            <input type="button" value="choose file"onclick="document.getElementById('selectedFile').click();"  style="background-color:  rgb(138, 241, 138);"><br>
-            <p class="start" style=" cursor: pointer;"  routerLink="/personalinfo" routerLinkActive="active">Personal Info</p>
-            <hr>   
-         <p  style=" cursor: pointer;"  routerLink="/address" routerLinkActive="active">My Addresses</p>
-         <hr>
-        <p style=" cursor: pointer;"  routerLink="/orders" routerLinkActive="active">My Orders</p>
-        <hr>
-        <p style=" cursor: pointer;"  routerLink="/wishlist" routerLinkActive="active">My WishList</p>
-        <hr>
-        <p style=" cursor: pointer;" >LogOut</p>
+<div class="side">
+<nav id="sidebar" >
+  <div class="custom-menu">
+    <button type="button" id="sidebarCollapse" class="btn btn-primary" >
+      <i class="fa fa-bars"></i>
+      <span class="sr-only">Toggle Menu</span>
+    </button>
     
-      </div>
-    <!-- </div> -->
-   
-    <!-- </div> -->
-    
-</div>
-
+  
+  </div>
+  <div class="p-4">
+    <!-- <input type="file" id="selectedFile"  style="display: none;" onchange="previewFile()"/>
+      <img src="../../assets/user.png" height="200" alt="user.png" class="logo1"> 
+     <input type="button" value="choose file"onclick="document.getElementById('selectedFile').click();"  style="background-color:  rgb(138, 241, 138); border-radius:10px ;width: 90px; margin-left: 65%;height: 25px;"><br> -->
  
-<script type="text/javascript">
+ 
+ 
+     <!-- <img [src]="url" height=200><br>
+  <input type="file" (change)="UploadImg($event)"> -->
 
-    function previewFile() {
-      var preview = document.querySelector('img');
-      var file = document.querySelector('input[type=file]').files[0];
-      var reader = new FileReader();
-    
-      // when user select an image, `reader.readAsDataURL(file)` will be triggered
-      // reader instance will hold the result (base64) data
-      // next, event listener will be triggered and we call `reader.result` to get
-      // the base64 data and replace it with the image tag src attribute
-      reader.addEventListener("load", function() {
-        console.log('before preview');
-        preview.src = reader.result;
-        console.log('after preview');
-      }, false);
-      if (file) {
-        console.log('inside if');
-        reader.readAsDataURL(file);
-      } else {
-        console.log('inside else');
-      }
-    }
-    
-    </script>
-    <!-- <router-outlet></router-outlet> -->
+  <div  *ngIf=" imageURL === ''">
+    <img src="../../assets/user.png" class="logo1"alt="user">
+  </div>
+  <form [formGroup]="uploadForm" (ngSubmit)="submit()">
+     <!-- Image Preview -->
+     <div *ngIf="imageURL && imageURL !== ''">
+      <img [src]="imageURL" class="logo1"[alt]="uploadForm.value.name">
+    </div>
+     
+    <h1><a  class="logo mb-0 mt-2"> Profiler</a></h1>
+    <hr >
+    <!-- Select File -->
+    <input type="file"  id="file"  accept="image/*" (change)="showPreview($event)" />
+    <label for="file" >choose pic</label>
+  
+    <!-- Assign Image Alt -->
+    <!-- <input formControlName="name" placeholder="Enter name">
+  
+    <button type="submit">Submit</button> -->
+  </form>
+  
+
+    <!-- <a href="#" class="img logo1 rounded-circle mb-1" style="background-image: url('../../assets/organic-oils.jpg');"></a> -->
+    <ul class="list-unstyled components mb-4">
+      <li >
+        <a  routerLink="/personalinfo" routerLinkActive="active"><span class="fa fa-user mr-3"></span>Profile</a>
+      </li>
+      <li>
+          <a  routerLink="/address" routerLinkActive="active"><span class="fa fa-address-card-o mr-3"></span>MyAddress</a>
+      </li>
+      <!-- <li>
+        <a  routerLink="/address" routerLinkActive="active"><span class="fa fa-list-alt mr-3"></span>MyProducts</a>
+      </li> -->
+      <li>
+        <a  routerLink="/orders" routerLinkActive="active"><span class="fa fa-shopping-cart mr-3"></span>MyOrders</a>
+      </li>
+      <!-- <li>
+        <a  routerLink="/cart" routerLinkActive="active"><span class="fa fa-cart-plus mr-3"></span> Cartitems</a>
+      </li> -->
+      <li>
+        <a  routerLink="/addwish" routerLinkActive="active"><span class="fa fa-heart mr-3"></span> MyWishlist</a>
+      </li>
+      <li>
+        <a ><span class="fa fa-sign-out mr-3"></span> Logout</a>
+      </li>
+     
+    </ul>
+
+    <div class="mb-5">
+      <h3 class="h6 ">ContactUs for more info</h3>
+      <form action="#" class="subscribe-form">
+        <div class="form-group d-flex">
+          <div class="icon" style="padding-right:8px ;padding-top: 2px;">  <span class="fa fa-paper-plane"></span></div>
+          <!-- <span class="fa fa icon-paper-plane"></span> -->
+          
+          <input type="text" class="form-control" placeholder="Enter Email Address">
+        </div>
+      </form>
+    </div>
+
+    <!-- <div class="footer">
+      <p>
+         &copy;<script>document.write(new Date().getFullYear());</script> Copyright rights reserved  <i class="icon-heart" aria-hidden="true"></i> by <a >CountryMan.com</a>
+       </p>
+    </div> -->
+  
+  </div>
+</nav>
+
+</div>

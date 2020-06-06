@@ -1,50 +1,47 @@
-<!-- <app-account></app-account>
-<div class="row" style="padding: 5% 0 0 40%;">
-    <h3 >Personal Info</h3>
-</div>
-<div class="row" style="padding: 0 0 0 40%;">
-    <label>Name</label>
-</div>
-<div class="row" style="padding: 0 0 0 40%;">
-    <input type="text">
-</div>
-
-<div class="row" style="padding: 0 0 0 40%;">
-<label>E-mail</label>
-</div>
-<div class="row" style="padding: 0 0 0 40%;">
-<input type="email" placeholder="E-mail" required #email [class.is-invalid]="email.invalid && email.touched"
-class="form"name="email" >
-
-
-
-<br>
-</div>-->
-<app-account></app-account>
-<div class="row" style="padding: 5% 0 0 40%;">
-    <h3>Personal Info</h3>
-</div>
-<div class="row" style="padding: 1% 0 0 39%;">
-   <div class="col-2">
-   <h5>Name</h5>
-</div>
-<div class="col-10">
-   <p style="color:rgb(77, 230, 77);cursor: pointer;">Edit</p>
-</div>
-</div>
-<div class="row" style="padding: 0 0 0 40%;">
-   <input name="name" type="text" disabled>
-</div>
-<div class="row" style="padding: 2% 0 0 39%;">
-   <div class="col-2">
-   <h5>E-mail</h5>
-   </div>
-   <div class="col-10">
-       <p style="color:rgb(77, 230, 77);cursor: pointer;" >Edit</p>
-   </div>
-</div>
-<div class="row" style="padding: 0 0 0 40%;">
+<div class="wapper d-flex align-items-stretch " style="margin-top: 80px;">
+    <app-account></app-account>
    
-   <input name="name" type="text" disabled>
+    <div id="content ">
+
+
+ <div class="card ml-5 mt-5" style="border: none;margin-left: 35%;margin-top: 20%;">
+        <form  >
+            <div class="form-group d-flex " style="align-items: left;">
+                <label>FirstName:</label>
+              <input  type="text" placeholder="Profilerlname" disabled class="username form-control" />
+            </div>
+            
+            <div class="form-group d-flex">
+                <label>LastName:</label>
+              <input  type="text" placeholder="Profilerlname" disabled class="username form-control" />
+            </div>
+
+            <div class="form-group d-flex">
+                <label>E-mail Id    :</label>
+              <input  type="email" placeholder="Profiler@gmail.com" disabled class="username form-control" />
+            </div>
+              
+           
+            <div class="form-group d-flex">
+                <label>UserName:</label>
+              <input  type="text" placeholder="ProfilerUname" disabled class="username form-control"/>
+            </div>
+
+            
+
+            <div class="form-group  d-flex">
+                <label>Password:</label>
+                <input type="password" disabled placeholder="Password*" class="username form-control"/>
+            </div><div class="form-group  d-flex">
+                <label>Re-Enter<br>Password:</label>
+                <input  type="password" disabled placeholder="Password*" class="username form-control"/>
+            </div>
+                   </form>
+            <button class="btn "  type="submit" style="background-color: rgb(138, 241, 138); width: 100px;align-items: center;">Edit Profile</button>     
+        
+        </div>
+  </div> 
+    
 </div>
+
 

@@ -19,7 +19,7 @@
         <div class="collapse navbar-collapse offset" id="navbarSupportedContent">
           <ul class="nav navbar-nav menu_nav ml-auto">
             <li class="nav-item active"><a class="nav-link" href="#" routerLink="/home" routerLinkActive="active">Home</a></li>
-            <li class="nav-item active"><a class="nav-link" href="#" routerLink="/product" routerLinkActive="active">Shop</a></li>
+            <li class="nav-item active"><a class="nav-link" href="#" routerLink="/cat" routerLinkActive="active">Shop</a></li>
             <li class="nav-item active"><a class="nav-link" href="#" routerLink="/about" routerLinkActive="active">About</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -31,8 +31,13 @@
                 <li class="nav-item"><a class="nav-link"  routerLink="/signup" routerLinkActive="active"><span class="fa fa-user-plus"style="padding-right: 20px;"></span>Register</a></li>
               </ul>
             </li>
-            <li class="nav-item"><button  class="cart"  routerLink="/cart" routerLinkActive="active"><span class="fa fa-shopping-bag"></span>
-            </button></li>
+            
+              <li class="nav-item"><button  class="cart"  routerLink="/cart" routerLinkActive="active"><span class="fa fa-shopping-bag"></span>
+              </button><span class='badge badge-warning' id='lblCartCount'> {{this.cart.length}}</span></li>
+          
+            <li class="nav-item"><button  class="cart"  routerLink="/addwish" routerLinkActive="active"><span class="fa fa-heart"></span>
+            </button><span class='badge badge-warning' id='lblCartCount'> {{this.wishlist.length}}</span></li>
+            
             <li class="nav-item">
               <button class="search"><span class="fa fa-search" id="search" (click)='onsearch()'></span></button>
             </li>

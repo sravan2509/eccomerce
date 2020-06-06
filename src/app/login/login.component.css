@@ -171,10 +171,10 @@
  }
  
  .fa {
-   padding: 14px;
-   font-size: 30px;
+   /* padding: px; */
+   font-size: 23px;
    width: 50px;
-   text-align: center;
+   /* text-align: center; */
    text-decoration: none;
  }
  
@@ -182,9 +182,9 @@
  .fa:hover {
    opacity: 0.7;
  }
- .fa-facebook {color:white }
+ .fa-facebook {color:blue }
  .fa-twitter {color: white}
- .fa-google  {color: white} 
+ .fa-google  {color: red} 
  .fa-instagram{color:white}
  .fa-pinterest{color:white}
  .danger{
@@ -195,5 +195,52 @@
    color:rgb(247, 77, 10);
  }
  .mid{
-    padding: 60px 0 0 380px;
+   padding-top: 20px;;
+   width: 600px;
+   margin: 0 auto;
+   overflow-x: hidden;
  }
+ .google-button {
+   height: 40px;
+   border-width: 0;
+   background: white;
+   color: #292727;
+   border-radius: 5px;
+   white-space: nowrap;
+   box-shadow: 1px 1px 0px 1px rgba(0, 0, 0, 0.05);
+   transition-property: background-color, box-shadow;
+   transition-duration: 150ms;
+   transition-timing-function: ease-in-out;
+   padding: 0;
+   width: 125px;
+   margin-left:5%;
+   outline: none;
+}
+.google-button:focus, .google-button:hover {
+   box-shadow: 1px 4px 5px 1px rgba(0, 0, 0, 0.1);
+   background-color: #e5e5e5;
+}
+.google-button:active {
+   background-color: #e5e5e5;
+   box-shadow: none;
+   transition-duration: 10ms;
+}
+.google-button__icon {
+   display: inline-block;
+   vertical-align: middle;
+   margin: 8px 5px 8px 4px;
+   width: 18px;
+   height: 18px;
+   box-sizing: border-box;
+   
+}
+
+.google-button__text {
+   display: inline-block;
+   /* vertical-align:middle; */
+   padding: 5px 24px;
+   font-size: 16px;
+   font-weight: bold;
+   font-family: 'Roboto', arial, sans-serif;
+}
+

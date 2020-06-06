@@ -393,14 +393,15 @@ border-radius: 20px 80px 40px 60px;
     z-index: -1;
   }
 
-  .card__one:hover,
+  /* .card__one:hover,
   .card__one:focus {
     transform: scale3d(1.006, 1.006,1.004, 1.004);}
 
     .card__one:hover::after ,.card__one:focus::after{
       opacity: 1;
       z-index: 1;
-    }
+    } */
+   
   
 .likebtn{
   color: black;background-color: rgb(138, 241, 138);width: 60px;height:7%;font-size: 14px;margin-top: 1.5px;

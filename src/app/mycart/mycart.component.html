@@ -1,25 +1,40 @@
-<div class="container mt-5">
-    <div class="maincon mt-2">
-      <i>You have </i><b style="color: rgb(241, 63, 63);">1</b> <i>  item in your cart!</i>
+<div class="container mt-5" style="padding-top: 70px;">
+    <div class="maincon mt-2 font5" style="text-align: center;">
+    <p class="font3" style="color: black;">My Cart({{this.o}})</p>
     </div>
     
-    <div class="subcon">
+    <div class="subcon font5">
         Buying from countryman is safe.Your order will be processed on our secure servers.
     </div>
-    <div class="container  mt-5 mb-4">
+    <div class="container  mt-5 mb-4 font5">
 
-        <div class="row"><div class="col-md-1.5"><button style="color: rgb(33, 230, 43);padding: 5px;border-radius: 5px;" routerLink="/ma" routerLinkActive="active">continue shoping</button></div>
-         <div class="col-md-5 s">Not your shoping cart?<a style="color: rgb(108, 122, 245);">Remove Items and logout</a></div>
-         <div class="col-md-5" style="float: right;"><button style="color: cornsilk;background-color: crimson;padding: 7px;border-radius: 4px;" >Proceed to Checkout   <i class="fa fa-shopping-cart"></i></button></div>
+        <div class="row"><div class="col-md-1.5 font"><button style="color: rgb(33, 230, 43);padding: 5px;border-radius: 5px;" routerLink="/cat" routerLinkActive="active">continue shoping</button></div>
+         <div class="col-md-5 s font5">Not your shoping cart?<a style="color: rgb(108, 122, 245);">Remove Items and logout</a></div>
+         <div class="col-md-5 font" style="float: right;"><button style="color: cornsilk;background-color: crimson;padding: 7px;border-radius: 4px;" >Proceed to Checkout   <i class="fa fa-shopping-cart"></i></button></div>
         </div>
     </div>    
         <br>
-    
-<div class="page">
+        <div *ngIf="!val">
+            <div class="row" style="align-items: center;">
+                <div class="col-lg-4 col-md-4 col-sm-3"></div>
+                <div class="col-lg-4 col-md-6 col-sm-7 col-12">
+                <div class="card mt-2 mb-5 " style="border: none;padding-top: 0px;"><img src="../../assets/cart.png" ></div>
+                </div>
+            </div>
+       
+            <div class="row " style="padding-top: 0px;" >
+                <div class="col-lg-5 col-md-5 col-sm-4 col-4"></div>
+                <div class="col-lg-4 col-md-6 col-sm-7 col-8 font" style="padding-left:30px">
+                <button style="background-color: rgb(241, 112, 20);;cursor: pointer;border-color: chocolate;color: white;"  routerLink="/cat" routerLinkActive="active">Start Shopping</button>
+        </div>
+        </div>
+    </div>
+       <div *ngIf="val">
+<div class="page" *ngFor="let data of cartarr;let i=index">
  
 <table class="layout display responsive-table">
     <thead>
-        <tr>
+        <tr class=" font2">
             <th>S.NO</th>
             <th>ITEM</th>
             <th>ITEM PRICE</th>
@@ -29,70 +44,65 @@
         </tr>
     </thead>
     <tbody>
-
+      
            
            <tr>
-            <td class="organisationnumber">1</td>
-            <td class="organisationname">
+            <td class="organisationnumber font5">{{i+1}}</td>
+            <td class="organisationname font5">
                 <div class="row ">
-                    <div class="col head "><img src="../../assets/badam.webp" alt=""style="height:105px"></div>
+                    <div class="col head "><img src="{{data.img}}" alt=""style="height:100px"></div>
                     <div class="col head " >
-                        <b><i style="color: rgba(9, 23, 105, 0.952);">BADAM PACK</i></b><br>
-                        Quality:1NO<br>
-                        Quantity/pack:200gm<br>
-                        <p style="color: goldenrod;">Avaliable in stoke</p>
+                        <b style="color: rgba(9, 23, 105, 0.952);">{{data.name}} Pack</b><br>
+                        Quality:{{data.quant}}<br>
+                        <!-- Quantity/pack:200gm<br> -->
+                        <p style="color: rgb(8, 206, 25);">Avaliable in stock</p>
                     </div>
                 </div>
             </td>
             <td class="mt-0">
-                <div class=" head pdetail1"><b>Rs.156</b><br><span style="font-size: 14px;">MRP:Rs.212</span><br><span style="color: darkgreen;">Discount:36%</span></div>
+                <div class=" head pdetail1"><b>Rs.{{data.cost}}</b><br><span style="font-size: 14px;">MRP:Rs.{{data.originalcost}}</span><br><span style="color: darkgreen;">Discount:{{data.offer}}</span></div>
             </td>
             <td>
                 <div class=" head pdetail1">
-                    <select  class="inc"name="select" #qun>
+                    <select  class="inc"name="select" #qun (change)="quality(qun.value,data.id)">
                         <option  selected>1</option>
                         <option *ngFor ="let i of [2,3,4,5]">{{i}}</option>
                     </select> <br>
-                    <button class="btnup" (click)="quality(qun.value)">update</button><br>
-                    <span><i class="fa fa-remove"></i> Remove item</span><br>
-                    <span><i class="fa fa-heartbeat"></i> Move to favourite</span>
+                    <!-- <button class="btnup" (click)="quality(qun.value)">update</button><br> -->
+                    <span (click)="addNew(i,data.id)" style="cursor: pointer;"><i class="fa fa-remove"></i> Remove item</span><br>
+                    <span (click)="Changeheart(i,data.id)" style="cursor:pointer"><i class="{{data.carheart}}"></i> Favourites</span>
     
                 </div>
             </td>
            <td>
-            <div class=" head " *ngIf="update;else elseBlock">Rs.{{price}}/-</div>
-            <ng-template #elseBlock><div class=" head">Rs.1556/-</div>
-            </ng-template>
+            <div class=" head" >Rs.{{data.cost}}/-</div>
+           
             </td>
            </tr>
+           
     </tbody>
 
          <tfoot>
             
-             <tr><td style="text-align: right; font-size: 14px;" colspan="4">
-               SUBTOTAL:</td>
-               <td class="head"colspan="1" *ngIf="update;else elseBlock">Rs.{{price}}/-</td>
-               <ng-template #elseBlock ><div class="head">Rs.{{p}}/-</div>
-               </ng-template></tr>
-             <tr >
+             <!-- <tr >
                     <td  colspan="4"style="text-align: right;font-size: 14px;">*ESTIMATED TAX TO BE COLLECTED:</td>
                    <td  colspan="1"style="text-align: center;">Rs.{{tax}}/-</td>
                 
                 
-             </tr>
-             <tr style="background-color: rgba(114, 148, 240, 0.425);">
+             </tr> -->
+             <!-- <tr style="background-color: rgba(114, 148, 240, 0.425);">
                     <td colspan="4" ><div style="text-align: right;font-size: 14px;">TOTAL PRICE:</div></td>
                     <td  colspan="1"><div class=" head"  *ngIf="update;else else1Block">Rs.{{price+tax}}/-</div></td>
                     <ng-template #else1Block><div class=" head">Rs.{{p+tax}}/-</div>
                     </ng-template>
                 
-             </tr>
+             </tr> -->
            
          </tfoot>  
    
 
 </table>
-
+</div>
 </div> 
     
 
@@ -106,11 +116,11 @@
             <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/Hyderabad1.jpg" class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2">HYDERABAD</h2> </div></div>
             <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/srinagar.jpg"   class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2">SRINAGAR </h2> </div></div>
             <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/delhi.jpg"      class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2">DELHI    </h2> </div> </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/delhi.jpg"      class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2">DELHI    </h2> </div></div>
+            <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/mumbai.webp"      class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2">MUMBAI    </h2> </div></div>
             <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/bengaluru1.jpg" class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2">BENGALUR </h2> </div></div>
             <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/jaipur.jpg"     class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2">JAIPUR   </h2> </div> </div>
             <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/shimla.webp"    class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2"> SHIMLA  </h2> </div> </div>
-            <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/shimla.webp"    class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2"> SHIMLA  </h2></div> </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 card cards my-2"><img src="../../assets/india.jpg"    class="card-img-top cardsall" style="height: 105px;" alt=""><div class="card-body"><h2 class="card-title font2"> AND MORE..  </h2></div> </div>
 
         </div>
     </div>
