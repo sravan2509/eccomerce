@@ -3,9 +3,9 @@
 
 .side {
     width: 270px;
-    position: fixed;
+    position: relative;
     z-index: 1;
-    top: 80px;
+    /* top: 80px; */
     /* left: 10px; */
     /* background: #eee; */
     /* overflow-x: hidden; */
@@ -21,7 +21,7 @@
     background: #38b434;
     color: #fff;
     transition: all 0.3s;
-    position: relative;
+    position: fixed;
     z-index: 999;
    
     
@@ -89,6 +89,7 @@
     color: white;
 }
 @media (max-width: 991px) {
+    .side{position: fixed;}
     #sidebar {
         margin-left: -270px;
         position: relative;

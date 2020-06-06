@@ -237,7 +237,7 @@ this. loadInitPost();
   seconds :number
   time
    year = new Date().getFullYear();
-  expireday = new Date(this.year, 5, 7).getTime();
+  expireday = new Date(this.year, 5, 26).getTime();
   timer(){
       const today = new Date().getTime();
       this.time = this.expireday - today;
