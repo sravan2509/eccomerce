@@ -12,6 +12,10 @@ import { CatComponent } from './cat/cat.component';
 import { DupComponent } from './dup/dup.component';
 import { MainComponent } from './main/main.component';
 import { ProDetailsComponent } from './pro-details/pro-details.component';
+import{InfiniteScrollModule} from 'ngx-infinite-scroll';
+import{NgxSpinnerModule} from 'ngx-spinner';
+import{HttpClientModule} from '@angular/common/http';
+import { NgMultiSelectDropDownModule } from 'ng-multiselect-dropdown-angular7';
 
 @NgModule({
   declarations: [
@@ -29,7 +33,11 @@ import { ProDetailsComponent } from './pro-details/pro-details.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule,ReactiveFormsModule
+    FormsModule,ReactiveFormsModule,
+    InfiniteScrollModule,
+    NgxSpinnerModule,
+    HttpClientModule,
+    NgMultiSelectDropDownModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
