@@ -30,7 +30,7 @@
         </div>
     </div>
        <div *ngIf="val">
-<div class="page" *ngFor="let data of cartarr;let i=index">
+<div class="page" >
  
 <table class="layout display responsive-table">
     <thead>
@@ -46,7 +46,7 @@
     <tbody>
       
            
-           <tr>
+           <tr *ngFor="let data of cartarr;let i=index">
             <td class="organisationnumber font5">{{i+1}}</td>
             <td class="organisationname font5">
                 <div class="row ">
@@ -60,11 +60,11 @@
                 </div>
             </td>
             <td class="mt-0">
-                <div class=" head pdetail1"><b>Rs.{{data.cost}}</b><br><span style="font-size: 14px;">MRP:Rs.{{data.originalcost}}</span><br><span style="color: darkgreen;">Discount:{{data.offer}}</span></div>
+                <div class=" head pdetail1"><b>Rs.{{data.cost}}</b><br><span style="font-size: 14px;">MRP:Rs.{{data.originalcost}}</span><br><span style="color: darkgreen;">Savings:{{data.offer}}</span></div>
             </td>
             <td>
                 <div class=" head pdetail1">
-                    <select  class="inc"name="select" #qun (change)="quality(qun.value,data.id)">
+                    <select  class="inc"name="select" #qun (change)="quality(qun.value,data.id,i)">
                         <option  selected>1</option>
                         <option *ngFor ="let i of [2,3,4,5]">{{i}}</option>
                     </select> <br>
@@ -75,8 +75,7 @@
                 </div>
             </td>
            <td>
-            <div class=" head" >Rs.{{data.cost}}/-</div>
-           
+            <div class=" head" >Rs.{{total[i]}}/-</div>
             </td>
            </tr>
            
@@ -90,13 +89,12 @@
                 
                 
              </tr> -->
-             <!-- <tr style="background-color: rgba(114, 148, 240, 0.425);">
-                    <td colspan="4" ><div style="text-align: right;font-size: 14px;">TOTAL PRICE:</div></td>
-                    <td  colspan="1"><div class=" head"  *ngIf="update;else else1Block">Rs.{{price+tax}}/-</div></td>
-                    <ng-template #else1Block><div class=" head">Rs.{{p+tax}}/-</div>
-                    </ng-template>
+             <tr >
+                    <td colspan="4" ><div class="price">TOTAL PRICE:</div></td>
+                    <td  colspan="1"><div class=" head" >Rs.{{priceTotal}}/-</div></td>
+                    
                 
-             </tr> -->
+             </tr>
            
          </tfoot>  
    
